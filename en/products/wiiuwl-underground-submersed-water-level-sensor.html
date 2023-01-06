@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- 使用rel="shortcut icon"为网页标题加图标 -->
+    <link href="../img/favicon.ico" rel="shortcut icon">
+    <title>Submerged Integrated Water Level Sensor | WiiHey</title>
+
+    <meta name="author" content="Jiayan Li" />
+    <meta name="keywords" content="water level sensor, integrated water level sensor">
+    <meta name="description" content="Integrated water level sensor is submerged into the deep water, update the data to the cloud and send Email/SMS alert notification">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/tgtable.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="../css/cubeportfolio.min.css" rel="stylesheet" /> -->
+    <link id="t-colors" href="../skins/default.css" rel="stylesheet" />
+    <link href="../css/languages.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../css/jquery.fancybox.min.css" />
+
+</head>
+
+<body>
+
+
+    <div id="wrapper">
+        <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                        <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" alt="" width="199" height="52" /></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                            <li><a class="root-menu" href="../index.html">Home</a></li>
+                            <li class="dropdown">
+                                <a href="portfolio.html" class="dropdown-toggle root-menu" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Solutions <i class="fa fa-angle-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-menu-layer-1" href="../portfolio.html#city">Smart City</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../applications/manhole-cover-monitoring.html">&nbsp;&nbsp;&raquo; Manhole cover monitoring</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../applications/water-level-monitoring.html">&nbsp;&nbsp;&raquo; Water Level Monitoring </a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../applications/parking-occupancy-detection.html">&nbsp;&nbsp;&raquo; Parking occupancy detection</a></li>
+
+                                    <li><a class="dropdown-menu-layer-1" href="../portfolio.html#factory">Industrial IoT</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../applications/vibration-monitoring-for-reducer.html">&nbsp;&nbsp;&raquo; Vibration monitoring</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../applications/solar-pv-module-level-monitoring.html">&nbsp;&nbsp;&raquo; Solar panel MLPE monitoring</a></li>
+
+                                    <li><a class="dropdown-menu-layer-1" href="../portfolio.html#retail">Smart Retail</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../applications/people-counting-system.html">&nbsp;&nbsp;&raquo; People counting system</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../applications/smart-shelf-management-system.html">&nbsp;&nbsp;&raquo; Smart shelf management</a></li>
+
+                                    <li><a class="dropdown-menu-layer-1" href="../portfolio.html">View All</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle root-menu" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Products <i class="fa fa-angle-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-menu-layer-1" href="../products.html#acquisition">Data Acquisition</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../products/wiilsw-manhole-cover-sensor.html">&nbsp;&nbsp;&raquo; Manhole Cover Sensor</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../products/manhole-cover-sensor-lux .html">&nbsp;&nbsp;&raquo; Manhole Cover Tilt/Lux Sensor</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../products/wiiwla-water-level-monitor.html">&nbsp;&nbsp;&raquo;  Flood Water Level Sensor</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../products/wiiuwl-underground-submersed-water-level-sensor.html">&nbsp;&nbsp;&raquo; Integrated Water Level Sensor</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../products/wiiung-parking-lot-sensor.html">&nbsp;&nbsp;&raquo; Parking Occupancy Sensor</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../products/wiimine-vibration-sensor.html">&nbsp;&nbsp;&raquo; Wireless Vibration Sensor</a></li>
+
+                                    <li><a class="dropdown-menu-layer-1" href="../products.html#transmission">Data Transmission</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../products/wiigate-iot-gateway.html">&nbsp;&nbsp;&raquo;  IoT Gateway/Transmitter</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../products/hohnet-wireless-sensor-network.html">&nbsp;&nbsp;&raquo; HOHNet&trade;</a></li>
+
+                                    <li><a class="dropdown-menu-layer-1" href="../products.html#process">Process & Analysis</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../products/wiimatrix-iot-data-platform.html">&nbsp;&nbsp;&raquo; WiiMatrix</a></li>
+                                    <li><a class="dropdown-menu-layer-1" href="../products.html#smartthings">Smart Things</a></li>
+                                    <li><a class="dropdown-menu-layer-1" href="../products/cables.html">Cables</a></li>
+                                    <li><a class="dropdown-menu-layer-1" href="../products.html">View All</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="root-menu" href="../about.html">Company</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="breadcrumb">
+                            <li><a href="../index.html"><i class="fa fa-home"></i> Home</a><i class="icon-angle-right"></i></li>
+                            <li><a href="../products.html">IoT products</a><i class="icon-angle-right"></i></li>
+                            <li class="active">WiiUWL</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="content">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-9">
+                        <h1>Submersed integrated water level sensor</h1>
+                        <p class="big-p-font">---For foundation ditch underground water monitoring</p>
+
+                        <div class="row">
+                            <div class="col-sm-9 col-md-8">
+                                <br /><br /><br /><br />
+                                <p>This NB-IoT water level sensor is exclusively design for the underground water monitoring in foundation ditch construction, the built-in battery and NB-IoT SIM card enables there is no any power or communication wiring
+                                    on the job site , the cloud based monitoring page will send SMS/Email alert notification in real time if the underground water reaches risky level.</p>
+                            </div>
+                            <div class="col-sm-3">
+                                <img class="img-responsive" src="../img/products/wiiuwl/WiiUWL.jpg" alt="Foundation pit water level">
+                            </div>
+                        </div>
+
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#Overview" data-toggle="tab" class="tab-name"><i class="icon-briefcase"></i>Overview</a></li>
+                            <li><a href="#Features" data-toggle="tab" class="tab-name">Features</a></li>
+                            <li><a href="#Specifications" data-toggle="tab" class="tab-name">Specifications</a></li>
+                            <li><a href="#Topology" data-toggle="tab" class="tab-name">Topology</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="Overview">
+                                <p>As the developing of urbanization and the limit of city space, the city buildings are gradually constructed higher and higher, the deep foundation pit system decides the success or failure of whole project.</p>
+
+                                <p>Water level data gathering is one of the most important monitoring of the whole foundation pit construction; our IoT based wireless foundation pit water level sensors will collect the water level values twenty hours each
+                                    day and update it to the cloud monitoring website regularly, and finally form visualization graphic.</p>
+                            </div>
+
+                            <div class="tab-pane" id="Features">
+                                <h4>Features</h4>
+                                <ul>
+                                    <li>Wireless telecommunication,</li>
+                                    <li>Regular data upload,</li>
+                                    <li>Regular self-inspection,</li>
+                                    <li>Simple and fast installation,</li>
+                                    <li>Built-in NB-IOT communication module,</li>
+                                    <li>Built-in replaceable Lithium battery,</li>
+                                    <li>Battery voltage monitoring,</li>
+                                    <li>AC power input free,</li>
+                                    <li>No cable connection,</li>
+                                    <li>304 Stainless steel case (Data transmitter)</li>
+                                </ul>
+
+                                <br />
+                                <h4>Comparison</h4>
+                                <h5>Conventional Wired Version:</h5>
+                                <p>The conventional water level monitoring system mostly includes a main data collector and several wired water level nodes as photos as below. The data collector should be in the construction site and needs the AC power input,
+                                    there will be many wire slots on the ground that are easily damaged and require extra labor cost.</p>
+
+                                <br />
+
+                                <div class="row">
+                                    <div class="col-md-6 col-xs-6">
+                                        <img src="../img/products/wiiuwl/traditional wired water level sensor_1.jpg" alt="traditional wired water level sensor">
+                                    </div>
+                                    <div class="col-md-6 col-xs-6">
+                                        <img src="../img/products/wiiuwl/traditional wired water level sensor_2.jpg" alt="traditional wired water level sensor">
+                                    </div>
+                                </div>
+                                <h5>NB-IOT Wireless Version:</h5>
+                                <p>No live date collector, no cable on the ground.</p>
+                                <br />
+                                <div class="row">
+                                    <div class="col-md-6 col-xs-6">
+                                        <img src="../img/products/wiiuwl/IoT water level sensor_1.jpg" alt="IoT water level sensor">
+                                    </div>
+                                    <div class="col-md-6 col-xs-6">
+                                        <img src="../img/products/wiiuwl/IoT water level sensor_2.jpg" alt="IoT water level sensor">
+                                    </div>
+                                </div>
+                                <br />
+
+                            </div>
+
+                            <div class="tab-pane" id="Specifications">
+                                <table class="tgtable">
+                                    <tbody>
+                                        <tr>
+                                            <th></th>
+                                            <td align="left"> <strong>Parameters</strong> </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">Range</td>
+                                            <td align="left">0~20 meters</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">Accuracy</td>
+                                            <td align="left">10mm</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">Size</td>
+                                            <td align="left">Sensor node: &Phi;26mm*105mm<br>Transmitter:&Phi;62mm*210mm</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">Case Material</td>
+                                            <td align="left">304 Stainless steel</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">Ingress Degree</td>
+                                            <td align="left">IP68</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">Protocol</td>
+                                            <td align="left">485</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">Telecommunication</td>
+                                            <td align="left">NB-IOT network (B3/B5/B8)</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">Antenna</td>
+                                            <td align="left">Built-in</td>
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+
+                                <br>
+
+                                <table class="tgtable">
+                                    <tbody align="left">
+                                        <tr>
+                                            <td colspan="2" align="center"><strong>Item</strong></td>
+                                            <td><strong>Parameters</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="3">Battery</td>
+                                            <td>Nominal voltage</td>
+                                            <td>3.6V DC</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Minimum work voltage</td>
+                                            <td>2.8V DC</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Capacity</td>
+                                            <td>19000mAh</td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="3">Power</td>
+                                            <td>Sleep Current</td>
+                                            <td>≤15uA</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Maximum Power</td>
+                                            <td>≤2W @3.6V</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Durability</td>
+                                            <td>≥6 months</td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="2">Self-Inspection</td>
+                                            <td>Interval</td>
+                                            <td>Pre-set</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Voltage</td>
+                                            <td>Ragne:2.8-3.6V, ±0.2V</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Alarm</td>
+                                            <td>Pre-set</td>
+                                            <td>1-10 times, no-stop till manual termination</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <br>
+
+                                <table class="tgtable">
+                                    <thead>
+                                        <tr>
+                                            <strong>Environment</strong>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Work Temperature（ &#8451）</td>
+                                            <td>-10 &#8451～+60 &#8451</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Storage Temperature（ &#8451）</td>
+                                            <td>-20 &#8451～+70 &#8451</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Humidity</td>
+                                            <td>5%～100%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Air Pressure (kPa)</td>
+                                            <td>63.0～106.0（
+                                                <4000m）</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <br>
+
+                                <table class="tgtable">
+                                    <thead>
+                                        <tr>
+                                            <strong>Performance and Safety</strong>
+                                        </tr>
+                                    </thead>
+                                    <tbody align="left">
+                                        <tr>
+                                            <td>Telecommunication Response Time</td>
+                                            <td>＜10s</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Average Lifespan</td>
+                                            <td>≥15000 hours</td>
+                                        </tr>
+                                        <tr>
+                                            <td>False Alarm Ratio</td>
+                                            <td>≤0.1%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Alarm Failure Ratio</td>
+                                            <td>≤0.1%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>EMC</td>
+                                            <td>Comply with IEC 61000-4-2、3、4、5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Isolation Resistance (Normal condition)</td>
+                                            <td>≥100MΩ</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Isolation Resistance (Wet and Hot)</td>
+                                            <td>≥2MΩ</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Leakage Current</td>
+                                            <td>＜5mA</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="tab-pane" id="Topology">
+
+                                <img src="../img/products/wiiuwl/Topology UWL .jpg" alt="wiiuwl position in hohnet topology" class="img-responsive" />
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <aside class="right-sidebar">
+                            <br />
+                            <div class="widget">
+                                <img src="../img/mesh_logo2.jpg" alt="" width="192" />
+                            </div>
+
+                            <div class="widget">
+                                <h4 class="widgetheading">Tags</h4>
+                                <ul class="tags">
+                                    <li><a href="../products.html#acquisition">Data acquisition</a></li>
+                                    <li><a href="../products.html">All</a></li>
+                                </ul>
+                            </div>
+
+                            <br />
+                            <div class="widget">
+                                <h4 class="widgetheading">Downloads</h4>
+                                <ul class="recent">
+
+                                    <li>
+                                        <img src="../img/pdf_icon.png" class="pull-left" alt="" width="24" style="width: 25px!important;" />
+                                        <h6><a href="../resources/Spec.WiiWLS.pdf">Spec:WiiWLS</a></h6>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="widget">
+                                <h4 class="widgetheading">Related posts</h4>
+                                <ul class="recent">
+                                    <li>
+                                        <img src="../img/applications/category/gear_big.jpg" class="pull-left" alt="" width="36" style="width: 25px!important;" />
+                                        <h6><a href="../applications/vibration-monitoring-for-reducer.html">Vibration monitoring of speed reducer</a></h6>
+                                    </li>
+                                    <br />
+
+                                    <li>
+                                        <img src="../img/applications/category/compress_big.jpg" class="pull-left" alt="" width="36" style="width: 25px!important;" />
+                                        <h6><a href="../applications/vibration-monitoring-for-compressor.html">Vibration monitoring of air compressor</a></h6>
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <div id="sub-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div>
+                                <p class="copyright text-muted ">Copyright &copy; WiiHey Technologies 2021-2022</p>
+                                <p class="copyright text-muted "><a href="https://beian.miit.gov.cn">沪ICP备16040630号-1</a></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <ul class="social-network">
+                                <li><a href="mailto:sales@wiihey.com" title="E-mail"><i class="fa fa-envelope-square"></i></a></li>
+                                <li><a href="../about.html#contact" title="Telephone"><i class="fa fa-phone-square"></i></a></li>
+                                <li><a href="https://www.facebook.com/wiiheycrop/" title="Facebook" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+                                <li><a href="https://twitter.com/gilbertjuly" title="Twitter" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+                                <li>
+                                    <div class="btn-group dropup">
+                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+							    <span class="lang-sm lang-lbl" lang="en"></span> <span class="caret"></span>
+							  </button>
+                                        <ul class="dropdown-menu " role="menu">
+                                            <li><a href="http://www.wiihey.com/zh-CN/index.html"><span class="lang-sm lang-lbl" lang="zh"></span></a></li>
+                                            <li><a href="http://www.wiihey.com/en/index.html"><span class="lang-sm lang-lbl" lang="en"></span></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <!-- <script src="../js/stellar.js"></script> -->
+    <!-- <script src="../js/classie.js"></script> -->
+    <!--<script src="../js/uisearch.js"></script>-->
+    <!-- <script src="../js/jquery.cubeportfolio.min.js"></script> -->
+    <!-- <script src="../js/google-code-prettify/prettify.js"></script> -->
+    <!-- <script src="../js/animate.js"></script> -->
+    <!-- <script src="../js/custom.js"></script> -->
+    <script src="../js/jquery.fancybox.min.js"></script>
+
+
+
+</body>
+
+</html>

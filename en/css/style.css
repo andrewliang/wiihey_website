@@ -1971,7 +1971,7 @@ section.demogrid .col-lg-12.nest {
 
 .solidline {
 	border-top:1px solid #EDEDED;
-	margin:0 0 30px;
+	margin:0 0 5px;
 }
 
 .solidline2 {
@@ -2670,3 +2670,8 @@ img.nobottom{
 	font-size: 24px !important;
 	line-height: 120% !important;
 }
+
+/* br{
+	display:inline; 
+	line-height:5px;
+} */

@@ -1,432 +1,429 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
-<meta charset="utf-8">
-<link href="../img/favicon.ico" rel="shortcut icon">
-<title>WiiUNG - The Parking lot sensor and Parking occupancy detection | WiiHey</title>
+    <meta charset="utf-8">
+    <link href="../img/favicon.ico" rel="shortcut icon">
+    <title>NB-IoT wireless parking lot occupancy sensor | WiiHey</title>
 
-<meta name="author" content="Jiayan Li" />
-<meta name="keywords" content="magnetic field detection sensor, parking lot sensor, Vehicle detector, parking occupancy detector">
-<meta name="description" content="In-Ground Parking lot sensors for Vehicle Detection via magnetic perturbation and wireless IoT technology enabling Smart Parking.">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta name="author" content="Jiayan Li" />
+    <meta name="keywords" content="parking sensor">
+    <meta name="description" content="This NB-IoT wireless parking lot occupancy sensor no needs to install cable underground and is easily to integrate to most parking charging system">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118765111-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118765111-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-118765111-1');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-<!-- css -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css" />
-<link href="../css/style.css" rel="stylesheet" />
-<link href="../css/tgtable.css" rel="stylesheet" type="text/css" />
-<!-- <link href="../css/cubeportfolio.min.css" rel="stylesheet" /> -->
-<link id="t-colors" href="../skins/default.css" rel="stylesheet" />
-<link href="../css/languages.min.css" rel="stylesheet" />
+        gtag('config', 'UA-118765111-1');
+    </script>
 
-<link rel="stylesheet" href="../css/jquery.fancybox.min.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/tgtable.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="../css/cubeportfolio.min.css" rel="stylesheet" /> -->
+    <link id="t-colors" href="../skins/default.css" rel="stylesheet" />
+    <link href="../css/languages.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../css/jquery.fancybox.min.css" />
 
 </head>
+
 <body>
 
 
-<div id="wrapper">
-	<!-- start header -->
-	<header>
-        <div class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+    <div id="wrapper">
+        <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" alt="" width="199" height="52" /></a>
-                </div>
-                <div class="navbar-collapse collapse ">
-                    <ul class="nav navbar-nav">
-                        <li><a class="root-menu" href="../index.html">Home</a></li>
-                        <li class="dropdown">
-                        	<a href="portfolio.html" class="dropdown-toggle root-menu" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Solutions <i class="fa fa-angle-down"></i></a>
-							<ul class="dropdown-menu">
-                                <li><a class="dropdown-menu-layer-1" href="../portfolio.html#factory">Industrial IoT</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="../applications/vibration-monitoring-for-reducer.html">&nbsp;&nbsp;&raquo; Vibration monitoring</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="../applications/solar-pv-module-level-monitoring.html">&nbsp;&nbsp;&raquo; Solar PV monitoring</a></li>
+                        <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" alt="" width="199" height="52" /></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                            <li><a class="root-menu" href="../index.html">Home</a></li>
+                            <li class="dropdown">
+                                <a href="portfolio.html" class="dropdown-toggle root-menu" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Solutions <i class="fa fa-angle-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-menu-layer-1" href="../portfolio.html#city">Smart City</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../applications/manhole-cover-monitoring.html">&nbsp;&nbsp;&raquo; Manhole cover monitoring</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../applications/water-level-monitoring.html">&nbsp;&nbsp;&raquo; Water Level Monitoring </a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../applications/parking-occupancy-detection.html">&nbsp;&nbsp;&raquo; Parking occupancy detection</a></li>
 
-                                <li><a class="dropdown-menu-layer-1" href="../portfolio.html#city">Smart City</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="../applications/manhole-cover-monitoring.html">&nbsp;&nbsp;&raquo; Manhole cover monitoring</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="../applications/parking-occupancy-detection.html">&nbsp;&nbsp;&raquo; Parking occupancy detection</a></li>
+                                    <li><a class="dropdown-menu-layer-1" href="../portfolio.html#factory">Industrial IoT</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../applications/vibration-monitoring-for-reducer.html">&nbsp;&nbsp;&raquo; Vibration monitoring</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../applications/solar-pv-module-level-monitoring.html">&nbsp;&nbsp;&raquo; Solar panel MLPE monitoring</a></li>
 
-                                <li><a class="dropdown-menu-layer-1" href="../portfolio.html#retail">Smart Retail</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="../applications/people-counting-system.html">&nbsp;&nbsp;&raquo; People counting system</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="../applications/smart-shelf-management-system.html">&nbsp;&nbsp;&raquo; Smart shelf management</a></li>
+                                    <li><a class="dropdown-menu-layer-1" href="../portfolio.html#retail">Smart Retail</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../applications/people-counting-system.html">&nbsp;&nbsp;&raquo; People counting system</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../applications/smart-shelf-management-system.html">&nbsp;&nbsp;&raquo; Smart shelf management</a></li>
 
-                                <li><a class="dropdown-menu-layer-1" href="../portfolio.html">View All</a></li>
-                            </ul>
-						</li>
-                        <li class="dropdown active">
-                            <a href="#" class="dropdown-toggle root-menu" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Products <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-menu-layer-1" href="../products.html#acquisition">Data Acquisition</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="../products/wiimine-vibration-sensor.html">&nbsp;&nbsp;&raquo; WiiMine</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="../products/wiiung-parking-lot-sensor.html">&nbsp;&nbsp;&raquo; WiiUNG</a></li>
-								<li><a class="dropdown-menu-layer-2" href="../products/wiilsw-manhole-cover-sensor.html">&nbsp;&nbsp;&raquo; WiiLSW</a></li>
-								<li><a class="dropdown-menu-layer-2" href="../products/wiiwla-water-level-monitor.html">&nbsp;&nbsp;&raquo; WiiWLA</a></li>
+                                    <li><a class="dropdown-menu-layer-1" href="../portfolio.html">View All</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle root-menu" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Products <i class="fa fa-angle-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-menu-layer-1" href="../products.html#acquisition">Data Acquisition</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../products/wiilsw-manhole-cover-sensor.html">&nbsp;&nbsp;&raquo; Manhole Cover Sensor</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../products/manhole-cover-sensor-lux .html">&nbsp;&nbsp;&raquo; Manhole Cover Tilt/Lux Sensor</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../products/wiiwla-water-level-monitor.html">&nbsp;&nbsp;&raquo;  Flood Water Level Sensor</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../products/wiiuwl-underground-submersed-water-level-sensor.html">&nbsp;&nbsp;&raquo; Integrated Water Level Sensor</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../products/wiiung-parking-lot-sensor.html">&nbsp;&nbsp;&raquo; Parking Occupancy Sensor</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../products/wiimine-vibration-sensor.html">&nbsp;&nbsp;&raquo; Wireless Vibration Sensor</a></li>
 
-                                <li><a class="dropdown-menu-layer-1" href="../products.html#transmission">Data Transmission</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="../products/wiigate-iot-gateway.html">&nbsp;&nbsp;&raquo; WiiGate</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="../products/hohnet-wireless-sensor-network.html">&nbsp;&nbsp;&raquo; HOHNet&trade;</a></li>
+                                    <li><a class="dropdown-menu-layer-1" href="../products.html#transmission">Data Transmission</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../products/wiigate-iot-gateway.html">&nbsp;&nbsp;&raquo;  IoT Gateway/Transmitter</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../products/hohnet-wireless-sensor-network.html">&nbsp;&nbsp;&raquo; HOHNet&trade;</a></li>
 
-                                <li><a class="dropdown-menu-layer-1" href="../products.html#process">Process & Analysis</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="../products/wiimatrix-iot-data-platform.html">&nbsp;&nbsp;&raquo; WiiMatrix</a></li>
-                                <li><a class="dropdown-menu-layer-1" href="../products.html#smartthings">Smart Things</a></li>
-                                <li><a class="dropdown-menu-layer-1" href="../products/cables.html">Cables</a></li>
-                                <li><a class="dropdown-menu-layer-1" href="../products.html">View All</a></li>
-                            </ul>
-                        </li>
-                        <li><a class="root-menu" href="../about.html">Company</a></li>
-                    </ul>
+                                    <li><a class="dropdown-menu-layer-1" href="../products.html#process">Process & Analysis</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../products/wiimatrix-iot-data-platform.html">&nbsp;&nbsp;&raquo; WiiMatrix</a></li>
+                                    <li><a class="dropdown-menu-layer-1" href="../products.html#smartthings">Smart Things</a></li>
+                                    <li><a class="dropdown-menu-layer-1" href="../products/cables.html">Cables</a></li>
+                                    <li><a class="dropdown-menu-layer-1" href="../products.html">View All</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="root-menu" href="../about.html">Company</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-	</header>
-	<!-- end header -->
+        </header>
+        <!-- end header -->
 
-	<section id="inner-headline">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<ul class="breadcrumb">
-					<li><a href="../index.html"><i class="fa fa-home"></i> Home</a><i class="icon-angle-right"></i></li>
-					<li><a href="../products.html">IoT products</a><i class="icon-angle-right"></i></li>
-					<li class="active">WiiUNG</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	</section>
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="breadcrumb">
+                            <li><a href="../index.html"><i class="fa fa-home"></i> Home</a><i class="icon-angle-right"></i></li>
+                            <li><a href="../products.html">IoT products</a><i class="icon-angle-right"></i></li>
+                            <li class="active">Parking Occupancy Sensor</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-	<section id="content">
-	<div class="container">
+        <section id="content">
+            <div class="container">
 
-		<div class="row">
-			<div class="col-lg-9">
-				<h1 class="small">WiiUNG - The Parking Lot Sensor</h1>
+                <div class="row">
+                    <div class="col-lg-9">
+                        <h1 class="small">NB-IoT wireless parking lot occupancy sensor</h1>
 
-				<br />
-				<div  class="row">
-					<div class="col-sm-9 col-md-8">
-						<br /><br /><br />
-						<p class = "big-p-font">WiiHey’s in-ground parking lot sensor enables you to monitor your parking facilities efficiently with real-time, individual vehicle, individual space data. It is the key to smart, active parking lot management.</p>
-					</div>
-					<div class="col-sm-3 col-md-4">
-						<img class="img-responsive" src="../img/products/sensor_parking6.png" alt="smart parking lot sensor">
-					</div>
-				</div>
+                        <br />
+                        <div class="row">
+                            <div class="col-sm-9 col-md-8">
+                                <br /><br /><br />
+                                <p class="big-p-font">WiiHey’s in-ground parking lot sensor enables you to monitor your parking facilities efficiently with real-time, individual vehicle, individual space data. It is the key to smart, active parking lot management.</p>
+                            </div>
+                            <div class="col-sm-3 col-md-4">
+                                <img class="img-responsive" src="../img/products/WiiEMS1.jpg" alt="smart parking lot sensor">
+                            </div>
+                        </div>
 
-				<ul class="nav nav-tabs">
-					<li class="active"><a href="#Overview" data-toggle="tab" class="tab-name"><i class="icon-briefcase"></i>Overview</a></li>
-					<li><a href="#Features" data-toggle="tab" class="tab-name">Features</a></li>
-					<li><a href="#Specifications" data-toggle="tab" class="tab-name">Specifications</a></li>
-					<li><a href="#Topology" data-toggle="tab" class="tab-name">Topology</a></li>
-					<li><a href="#Gallery" data-toggle="tab" class="tab-name">Gallery</a></li>
-				</ul>
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#Overview" data-toggle="tab" class="tab-name"><i class="icon-briefcase"></i>Overview</a></li>
+                            <li><a href="#Features" data-toggle="tab" class="tab-name">Features</a></li>
+                            <li><a href="#Specifications" data-toggle="tab" class="tab-name">Specifications</a></li>
+                            <li><a href="#Topology" data-toggle="tab" class="tab-name">Topology</a></li>
+                            <li><a href="#Gallery" data-toggle="tab" class="tab-name">Gallery</a></li>
+                        </ul>
 
-				<div class="tab-content">
-					<div class="tab-pane active" id="Overview">
-						<p>The effectiveness of a parking lot management system is greatly relied on detection of available parking spaces. WiiUNG offers parking lot sensing technology that can be easily tailored to your existing parking system, to monitor parking traffic, and to gather live, precise information from each individual parking lot space.</p>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="Overview">
+                                <p>The effectiveness of a parking lot management system is greatly relied on the detection of available parking spaces. WiiEMS offers parking lot sensing technology that can be easily tailored to your existing parking system,
+                                    to monitor parking traffic, and to gather real time and precise information from each individual parking lot space.</p>
+                                <p>The heart of the WiiEMS sensor is a geomagnetic sensor that measures the X, Y, and Z-axis values of the Earth’s magnetic field. As vehicles come into the range of the sensor, changes in the surrounding magnetic field occur
+                                    and are detected. As auxiliary, an additional luminance sensor is added for double verification by detecting the background brightness changes when vehicles drive above the sensor.</p>
+                            </div>
 
-						<p>The heart of the WiiUNG sensor is an electro-magnetic sensor that measures the X, Y and Z-axis components of the Earth’s magnetic field. As vehicles come within range of the sensor, changes in the surrounding magnetic field occur and are detected. Each sensor continually monitors the background magnetic field using advanced filtering and noise reduction techniques to differentiate parking events from other electromagnetic interferences or false events. </p>
+                            <div class="tab-pane" id="Features">
+                                <h4>Features</h4>
+                                <ul>
+                                    <li>Geomagnetic sensor &amp; luminance sensor;</li>
+                                    <li>Wireless communication for ease of installation;</li>
+                                    <li>Powered by long-life batteries;</li>
+                                    <li>Robust construction to resist both vandalism and accidental damage;</li>
+                                    <li>Easy integration with existing parking management systems;</li>
+                                </ul>
 
-						<p>The WiiUNG sensor transmits data via LPWAN (Low Power Wide Area Network) technologies, i.e., NB-IoT (Narrow Band-IoT) or UNB-IoT (Ultra Narrow Band-IoT), and is battery powered for several years, so it requires no wires for installation and can be easily fitted into each parking lot space.</p>
-					</div>
+                                <br />
 
-					<div class="tab-pane" id="Features">
-						<h4>Features</h4>
-						<ul>
-							<li>Electro-magnetic sensoring technology in every in-ground sensor;</li>
-							<li>Wireless for ease of installation and minimal costs by eliminating civil works;</li>
-							<li>Powered by long-life batteries for low maintenance;</li>
-							<li>Robust construction to resist both vandalism and accidental damage;</li>
-							<li>Easy integration with existing parking management systems;</li>
-						</ul>
-						<br />
+                                <h4>Applications</h4>
+                                <ul>
+                                    <li>Parking space occupancy detection;</li>
+                                    <li>Vehicle detection in drive-through;</li>
+                                    <li>Vehicle counting in toll booths;</li>
+                                    <li>Enable advanced parking space management and planning;</li>
+                                    <li>Enable advanced parking guide system</li>
+                                </ul>
+                                <br />
+                            </div>
 
-						<h4>Applications</h4>
-						<ul>
-							<li>Parking space occupancy detection;</li>
-							<li>Vehicle detection in drive-through;</li>
-							<li>Vehicle counting in toll booths;</li>
-							<li>Enable advanced parking space management and planning;</li>
-							<li>Enable advanced parking guide system;</li>
-						</ul>
-						<br />
-					</div>
+                            <div class="tab-pane" id="Specifications">
+                                <table class="tgtable">
+                                    <tbody>
+                                        <tr style="height: 23px;">
+                                            <td style="height: 23px;" colspan="2"><strong>Parking Lot Sensor</strong></td>
+                                        </tr>
+                                        <tr style="height: 23px;">
+                                            <td style="height: 23px;" rowspan="2">Sensor</td>
+                                            <td style="height: 23px;">geomagnetic sensor</td>
+                                        </tr>
+                                        <tr style="height: 23px;">
+                                            <td style="height: 23px;">and auxiliary luminance sensor (Lux detection)</td>
+                                        </tr>
+                                        <tr style="height: 23px;">
+                                            <td style="height: 23px;">Resolution</td>
+                                            <td style="height: 23px;">1.5 Mgauss / 0.028Lux</td>
+                                        </tr>
 
-					<div class="tab-pane" id="Specifications">
-						<table class="tgtable">
-						<tbody>
-						<tr style="height: 23px;">
-						<th style="height: 23px;" colspan="2">Magnetic-field Measurement</th>
-						</tr>
-						<tr style="height: 23px;">
-						<td style="height: 23px;">Sensor</td>
-						<td style="height: 23px;">3-axial magnetic-field MEMS sensor</td>
-						</tr>
-						<tr style="height: 23px;">
-						<td style="height: 23px;">Measurement range</td>
-						<td style="height: 23px;">Maximum &plusmn;16 gauss selectable magnetic full scales</td>
-						</tr>
-						<tr style="height: 23px;">
-						<td style="height: 23px;">Resolution</td>
-						<td style="height: 23px;">1.5 mgauss</td>
-						</tr>
-						<tr style="height: 23px;">
-						<th style="height: 23px;" colspan="2">Wireless Connectivity</th>
-						</tr>
-						<tr style="height: 43px;">
-						<td style="height: 43px;">Radio</td>
-						<td style="height: 43px;">
-						NB-IoT (Narrow Band-IoT) <br />
-						UNB-IoT (Ultra Narrow Band-IoT): ISM bands (868/915 MHz) <br />
-						Support SigFox
-						</td>
-						</tr>
-						<tr style="height: 23px;">
-						<td style="height: 23px;">Range</td>
-						<td style="height: 23px;">1-2 km</td>
-						</tr>
-						<tr style="height: 23px;">
-						<th style="height: 23px;" colspan="2">Power</th>
-						</tr>
-						<tr style="height: 23px;">
-						<td style="height: 23px;">Power source</td>
-						<td style="height: 23px;">Built-in lithium battery</td>
-						</tr>
-						<tr style="height: 23px;">
-						<td style="height: 23px;">Battery life</td>
-						<td style="height: 23px;">5-7 years</td>
-						</tr>
-						<tr style="height: 23px;">
-						<th style="height: 23px;" colspan="2">Mechanical</th>
-						</tr>
-						<tr style="height: 23px;">
-						<td style="height: 23px;">Dimensions</td>
-						<td style="height: 23px;">&Oslash; 90 mm *&nbsp;height 33 mm</td>
-						</tr>
-						<tr style="height: 23px;">
-						<td style="height: 23px;">Weight</td>
-						<td style="height: 23px;">120 g</td>
-						</tr>
-						<tr style="height: 23px;">
-						<th style="height: 23px;" colspan="2">Environmental</th>
-						</tr>
-						<tr style="height: 23px;">
-						<td style="height: 23px;">Operating temp</td>
-						<td style="height: 23px;">-40 &deg;C to 85&nbsp;&deg;C</td>
-						</tr>
-						<tr style="height: 23px;">
-						<td style="height: 23px;">IP Rating</td>
-						<td style="height: 23px;">IP68</td>
-						</tr>
-						<tr style="height: 23px;">
-						<td style="height: 23px;">Compressive strength</td>
-						<td style="height: 23px;">&gt;20,000 kg</td>
-						</tr>
-						</tbody>
-						</table>
-					</div>
+                                        <tr style="height: 23px;">
+                                            <td style="height: 23px;" colspan="2"><strong>Wireless Connectivity</strong></td>
+                                        </tr>
+                                        <tr style="height: 43px;">
+                                            <td style="height: 43px;">Network</td>
+                                            <td style="height: 43px;">
+                                                NB-IoT：LTE Cat NB2<br/> Band1/B2/B3/B4/B5/B8/B12/B13/B17/B18/B19/B20/B25/B28/B66:
+                                                <br/> Transmitting Power: 23dBm&plusmn;2dB<br/> Receiving Sensitivity: -114dBm(no retransmit)<br/> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;-130dBm(with retransmit)
+                                            </td>
+                                        </tr>
+                                        <tr style="height: 23px;">
+                                            <td style="height: 23px;">SIM Card Type</td>
+                                            <td style="height: 23px;">Micro SIM Card</td>
+                                        </tr>
+                                        <tr style="height: 23px;">
+                                            <td style="height: 23px;" colspan="2"><strong>Power</strong></td>
+                                        </tr>
+                                        <tr style="height: 23px;">
+                                            <td style="height: 23px;">Power source</td>
+                                            <td style="height: 23px;">8000mAh@3.6V lithium battery<br/> (Solar panel charging module optional)</td>
+                                        </tr>
+                                        <tr style="height: 23px;">
+                                            <td style="height: 23px;">Battery life</td>
+                                            <td style="height: 23px;">3-5 years</td>
+                                        </tr>
+                                        <tr style="height: 23px;">
+                                            <td style="height: 23px;">Battery Changeable</td>
+                                            <td style="height: 23px;">Yes</td>
+                                        </tr>
+                                        <tr style="height: 23px;">
+                                            <td style="height: 23px;" colspan="2"><strong>Mechanical</strong></td>
+                                        </tr>
+                                        <tr style="height: 23px;">
+                                            <td style="height: 23px;">Case Material</td>
+                                            <td style="height: 23px;">Transparent High Intensity Plastic</td>
+                                        </tr>
+                                        <tr style="height: 23px;">
+                                            <td style="height: 23px;">Dimensions</td>
+                                            <td style="height: 23px;">&Oslash; 90 mm *&nbsp;height 33 mm</td>
+                                        </tr>
+                                        <tr style="height: 23px;">
+                                            <td style="height: 23px;">Weight</td>
+                                            <td style="height: 23px;">120 g</td>
+                                        </tr>
+                                        <tr style="height: 23px;">
+                                            <td style="height: 23px;">Installation</td>
+                                            <td style="height: 23px;">Recessed</td>
+                                        </tr>
+                                        <tr style="height: 23px;">
+                                            <td style="height: 23px;" colspan="2"><strong>Environmental</strong></td>
+                                        </tr>
+                                        <tr style="height: 23px;">
+                                            <td style="height: 23px;">Operating temp</td>
+                                            <td style="height: 23px;">-20 &deg;C to +65&nbsp;&deg;C</td>
+                                        </tr>
+                                        <tr style="height: 23px;">
+                                            <td style="height: 23px;">Ingress Degree</td>
+                                            <td style="height: 23px;">IP68</td>
+                                        </tr>
+                                        <tr style="height: 23px;">
+                                            <td style="height: 23px;">Compressive strength</td>
+                                            <td style="height: 23px;">&gt;20,000 kg</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
 
-					<div class="tab-pane" id="Topology">
-						<p>WiiUNG supports two optional wireless communication methods -- UNB(Ultra Narrow Band) IoT technology and NB (Narrow Band)-IoT technology. Both technologies have transmission ranges of up to several kilometers in urban environments, with very low power consumption, data are then transmitted to cloud sever for further processing and delivery into the end-user’s system.</p>
+                            <div class="tab-pane" id="Topology">
+                                <p>WiiUNG supports two optional wireless communication methods -- UNB(Ultra Narrow Band) IoT technology and NB (Narrow Band)-IoT technology. Both technologies have transmission ranges of up to several kilometers in urban environments,
+                                    with very low power consumption, data are then transmitted to cloud sever for further processing and delivery into the end-user’s system.</p>
 
-						<br />
+                                <br />
 
-						<p>Topology of UNB-IoT communication (SigFox compatible):</p>
-						<img src="../img/products/topology/top_v5_wiiung_unb.png" alt="wiiung UNB-IOT sigfox in hohnet topology"  class="img-responsive"  />
+                                <p>Topology of NB-IoT communication:</p>
+                                <img src="../img/products/topology/WiiEMS Topology.jpg" alt="wiiung NB-IOT in hohnet topology" class="img-responsive" />
+                            </div>
 
-						<p>Topology of NB-IoT communication:</p>
-						<img src="../img/products/topology/top_v5_wiiung_nb.png" alt="wiiung NB-IOT in hohnet topology"  class="img-responsive"  />
-					</div>
+                            <div class="tab-pane" id="Gallery">
+                                <div class="row text-center">
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="thumbnail">
+                                            <a data-fancybox="gallery" data-srcset="../img/products/wiiung/sensor1.jpg" data-caption="WiiUNG: Front view" href="../img/products/wiiung/sensor1.jpg"><img src="../img/products/wiiung/sensor1.jpg" alt="Parking lot sensor"></a>
+                                            <p>Front view</p>
+                                        </div>
+                                    </div>
 
-					<div class="tab-pane" id="Gallery">
-				        <div class="row text-center">
-				            <div class="col-md-4 col-sm-6">
-				                <div class="thumbnail">
-									<a data-fancybox="gallery"
-			                        data-srcset="../img/products/wiiung/sensor1.jpg"
-			                        data-caption="WiiUNG: Front view"
-			                        href="../img/products/wiiung/sensor1.jpg"><img src="../img/products/wiiung/sensor1.jpg" alt="Parking lot sensor"></a>
-			                        <p>Front view</p>
-				                </div>
-				            </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="thumbnail">
+                                            <a data-fancybox="gallery" data-srcset="../img/products/wiiung/sensor2.jpg" data-caption="WiiUNG: Angled view" href="../img/products/wiiung/sensor2.jpg"><img src="../img/products/wiiung/sensor2.jpg" alt="Parking lot sensor"></a>
+                                            <p>Angled view</p>
+                                        </div>
+                                    </div>
 
-				            <div class="col-md-4 col-sm-6">
-				                <div class="thumbnail">
-									<a data-fancybox="gallery"
-			                        data-srcset="../img/products/wiiung/sensor2.jpg"
-			                        data-caption="WiiUNG: Angled view"
-			                        href="../img/products/wiiung/sensor2.jpg"><img src="../img/products/wiiung/sensor2.jpg" alt="Parking lot sensor"></a>
-			                        <p>Angled view</p>
-				                </div>
-				            </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="thumbnail">
+                                            <a data-fancybox="gallery" data-srcset="../img/products/wiiung/real1.jpg" data-caption="Recess mounting on the street" href="../img/products/wiiung/real1.jpg"><img src="../img/products/wiiung/real1.jpg" alt="Parking lot sensor"></a>
+                                            <p>Recess mounting</p>
+                                        </div>
+                                    </div>
 
-				            <div class="col-md-4 col-sm-6">
-				                <div class="thumbnail">
-									<a data-fancybox="gallery"
-			                        data-srcset="../img/products/wiiung/real1.jpg"
-			                        data-caption="Recess mounting on the street"
-			                        href="../img/products/wiiung/real1.jpg"><img src="../img/products/wiiung/real1.jpg" alt="Parking lot sensor"></a>
-			                        <p>Recess mounting</p>
-				                </div>
-				            </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="thumbnail">
+                                            <a data-fancybox="gallery" data-srcset="../img/products/wiiung/street1.jpg" data-caption="Monitor on-street parking" href="../img/products/wiiung/street1.jpg"><img src="../img/products/wiiung/street1.jpg" alt="Parking lot sensor"></a>
+                                            <p>On-street parking</p>
+                                        </div>
+                                    </div>
 
-				            <div class="col-md-4 col-sm-6">
-				                <div class="thumbnail">
-									<a data-fancybox="gallery"
-			                        data-srcset="../img/products/wiiung/street1.jpg"
-			                        data-caption="Monitor on-street parking"
-			                        href="../img/products/wiiung/street1.jpg"><img src="../img/products/wiiung/street1.jpg" alt="Parking lot sensor"></a>
-			                        <p>On-street parking</p>
-				                </div>
-				            </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="thumbnail">
+                                            <a data-fancybox="gallery" data-srcset="../img/products/wiiung/street2.jpg" data-caption="WiiUNG monitoring on-street parking" href="../img/products/wiiung/street2.jpg"><img src="../img/products/wiiung/street2.jpg" alt="Parking lot sensor"></a>
+                                            <p>WiiUNG on street</p>
+                                        </div>
+                                    </div>
 
-				            <div class="col-md-4 col-sm-6">
-				                <div class="thumbnail">
-									<a data-fancybox="gallery"
-			                        data-srcset="../img/products/wiiung/street2.jpg"
-			                        data-caption="WiiUNG monitoring on-street parking"
-			                        href="../img/products/wiiung/street2.jpg"><img src="../img/products/wiiung/street2.jpg" alt="Parking lot sensor"></a>
-			                        <p>WiiUNG on street</p>
-				                </div>
-				            </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="thumbnail">
+                                            <a data-fancybox="gallery" data-srcset="../img/products/wiiung/street3.jpg" data-caption="WiiUNG monitoring on-street parking" href="../img/products/wiiung/street3.jpg"><img src="../img/products/wiiung/street3.jpg" alt="Parking lot sensor"></a>
+                                            <p>WiiUNG on street</p>
+                                        </div>
+                                    </div>
 
-				            <div class="col-md-4 col-sm-6">
-				                <div class="thumbnail">
-									<a data-fancybox="gallery"
-			                        data-srcset="../img/products/wiiung/street3.jpg"
-			                        data-caption="WiiUNG monitoring on-street parking"
-			                        href="../img/products/wiiung/street3.jpg"><img src="../img/products/wiiung/street3.jpg" alt="Parking lot sensor"></a>
-			                        <p>WiiUNG on street</p>
-				                </div>
-				            </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="thumbnail">
+                                            <a data-fancybox="gallery" data-srcset="../img/products/wiiung/street4.jpg" data-caption="WiiUNG installation" href="../img/products/wiiung/street4.jpg"><img src="../img/products/wiiung/street4.jpg" alt="Parking lot sensor"></a>
+                                            <p>WiiUNG installation</p>
+                                        </div>
+                                    </div>
+                                </div>
 
-				            <div class="col-md-4 col-sm-6">
-				                <div class="thumbnail">
-									<a data-fancybox="gallery"
-			                        data-srcset="../img/products/wiiung/street4.jpg"
-			                        data-caption="WiiUNG installation"
-			                        href="../img/products/wiiung/street4.jpg"><img src="../img/products/wiiung/street4.jpg" alt="Parking lot sensor"></a>
-			                        <p>WiiUNG installation</p>
-				                </div>
-				            </div>
-				        </div>
+                            </div>
 
-					</div>
+                        </div>
+                    </div>
 
-				</div>
-			</div>
+                    <div class="col-lg-3">
+                        <aside class="right-sidebar">
+                            <br />
+                            <div class="widget">
+                                <img src="../img/mesh_logo2.jpg" alt="" width="192" />
+                            </div>
 
-			<div class="col-lg-3">
-				<aside class="right-sidebar">
-				<br />
-				<div class="widget">
-					<img src="../img/mesh_logo2.jpg" alt="" width="192"/>
-				</div>
+                            <div class="widget">
+                                <h4 class="widgetheading">Tags</h4>
+                                <ul class="tags">
+                                    <li><a href="../products.html#acquisition">Data acquisition</a></li>
+                                    <li><a href="../products.html">All</a></li>
+                                </ul>
+                            </div>
 
-				 <div class="widget">
-				 	<h4 class="widgetheading">Tags</h4>
-				 	<ul class="tags">
-				 		<li><a href="../products.html#acquisition">Data acquisition</a></li>
-				 		<li><a href="../products.html">All</a></li>
-				 	</ul>
-				 </div>
+                            <br />
+                            <div class="widget">
+                                <h4 class="widgetheading">Downloads</h4>
+                                <ul class="recent">
 
-				<br />
-				<div class="widget">
-					<h4 class="widgetheading">Downloads</h4>
-					<ul class="recent">
+                                    <li>
+                                        <img src="../img/pdf_icon.png" class="pull-left" alt="" width="24" style="width: 25px!important;" />
+                                        <h6><a href="../resources/Spec. WiiEMS.pdf">Spec:  WiiEMS </a></h6>
+                                    </li>
+                                </ul>
+                            </div>
 
-						<li>
-							<img src="../img/pdf_icon.png" class="pull-left" alt=""  width="24" style="width: 25px!important;"/>
-							<h6><a href="../resources/spec-wiiung-smart-parking-lot-sensor.pdf">Spec: WiiUNG parking lot sensor</a></h6>
-						</li>
-					</ul>
-				</div>
+                            <div class="widget">
+                                <h4 class="widgetheading">Related posts</h4>
+                                <ul class="recent">
+                                    <li>
+                                        <img src="../img/applications/category/parking_big.jpg" class="pull-left" alt="" width="36" style="width: 25px!important;" />
+                                        <h6><a href="../applications/parking-occupancy-detection.html">Parking occupancy detection</a></h6>
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside>
+                    </div>
 
-				<div class="widget">
-					<h4 class="widgetheading">Related posts</h4>
-					<ul class="recent">
-						<li>
-							<img src="../img/applications/category/parking_big.jpg" class="pull-left" alt=""  width="36" style="width: 25px!important;"/>
-							<h6><a href="../applications/parking-occupancy-detection.html">Parking occupancy detection</a></h6>
-						</li>
-					</ul>
-				</div>
-				</aside>
-			</div>
+                </div>
 
-		</div>
+            </div>
+        </section>
 
-	</div>
-	</section>
-
-	<footer>
-	<div id="sub-footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6 col-md-6">
-					<div>
-		            	<p class="copyright text-muted ">Copyright &copy; 2016 - 2018 WiiHey Technology</p>
-		            	<p class="copyright text-muted ">沪ICP备16040630号</p>
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-6">
-					<ul class="social-network">
-						<li><a href="mailto:sales@wiihey.com" title="E-mail"><i class="fa fa-envelope-square"></i></a></li>
-						<li><a href="../about.html#contact" title="Telephone"><i class="fa fa-phone-square"></i></a></li>
-						<li><a href="https://www.facebook.com/wiiheycrop/" title="Facebook" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
-						<li><a href="https://twitter.com/gilbertjuly" title="Twitter" target="_blank" ><i class="fa fa-twitter-square"></i></a></li>
-						<li>
-							<div class="btn-group dropup">
-							  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        <footer>
+            <div id="sub-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div>
+                                <p class="copyright text-muted ">Copyright &copy; WiiHey Technologies 2021-2022</p>
+                                <p class="copyright text-muted "><a href="https://beian.miit.gov.cn">沪ICP备16040630号-1</a></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <ul class="social-network">
+                                <li><a href="mailto:sales@wiihey.com" title="E-mail"><i class="fa fa-envelope-square"></i></a></li>
+                                <li><a href="../about.html#contact" title="Telephone"><i class="fa fa-phone-square"></i></a></li>
+                                <li><a href="https://www.facebook.com/wiiheycrop/" title="Facebook" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+                                <li><a href="https://twitter.com/gilbertjuly" title="Twitter" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+                                <li>
+                                    <div class="btn-group dropup">
+                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 							    <span class="lang-sm lang-lbl" lang="en"></span> <span class="caret"></span>
 							  </button>
-							  <ul class="dropdown-menu " role="menu">
-							    <li><a href="http://www.wiihey.com/zh-CN/index.html" ><span class="lang-sm lang-lbl" lang="zh"></span></a></li>
-							    <li><a href="http://www.wiihey.com/en/index.html" ><span class="lang-sm lang-lbl" lang="en"></span></a></li>
-							  </ul>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	</footer>
+                                        <ul class="dropdown-menu " role="menu">
+                                            <li><a href="http://www.wiihey.com/zh-CN/index.html"><span class="lang-sm lang-lbl" lang="zh"></span></a></li>
+                                            <li><a href="http://www.wiihey.com/en/index.html"><span class="lang-sm lang-lbl" lang="en"></span></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
-</div>
+    </div>
 
-<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-<!-- <script src="../js/stellar.js"></script> -->
-<!-- <script src="../js/classie.js"></script> -->
-<!--<script src="../js/uisearch.js"></script>-->
-<!-- <script src="../js/jquery.cubeportfolio.min.js"></script> -->
-<!-- <script src="../js/google-code-prettify/prettify.js"></script> -->
-<!-- <script src="../js/animate.js"></script> -->
-<!-- <script src="../js/custom.js"></script> -->
-<script src="../js/jquery.fancybox.min.js"></script>
+    <!-- <script src="../js/stellar.js"></script> -->
+    <!-- <script src="../js/classie.js"></script> -->
+    <!--<script src="../js/uisearch.js"></script>-->
+    <!-- <script src="../js/jquery.cubeportfolio.min.js"></script> -->
+    <!-- <script src="../js/google-code-prettify/prettify.js"></script> -->
+    <!-- <script src="../js/animate.js"></script> -->
+    <!-- <script src="../js/custom.js"></script> -->
+    <script src="../js/jquery.fancybox.min.js"></script>
 
 
 
 </body>
+
 </html>

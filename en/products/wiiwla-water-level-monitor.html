@@ -2,477 +2,626 @@
 
 
 <html>
+
 <head>
-<meta charset="utf-8">
-<link href="../img/favicon.ico" rel="shortcut icon">
-<title>WiiWLA - The Water Level Monitor / Flood Detector| WiiHey</title>
+    <meta charset="utf-8">
+    <link href="../img/favicon.ico" rel="shortcut icon">
+    <title>Remote monitoring IoT Flood Water Level Sensor | WiiHey</title>
 
-<meta name="author" content="Jiayan Li" />
+    <meta name="author" content="Jiayan Li" />
 
-<meta name="keywords" content="The Water Level Monitor, Flood Detector">
+    <meta name="keywords" content="water level sensor, water flooding detector">
 
-<meta name="description" content="The Water Level Monitor, Flood Detector">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta name="description" content="By water level sensors installed in different heights, IoT detector remote monitoring and alert the flood in the tunnel or dam">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118765111-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118765111-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-118765111-1');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-<!-- css -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css" />
-<link href="../css/style.css" rel="stylesheet" />
-<link href="../css/tgtable.css" rel="stylesheet" type="text/css" />
-<!-- <link href="../css/cubeportfolio.min.css" rel="stylesheet" /> -->
-<link id="t-colors" href="../skins/default.css" rel="stylesheet" />
-<link href="../css/languages.min.css" rel="stylesheet" />
+        gtag('config', 'UA-118765111-1');
+    </script>
 
-<link rel="stylesheet" href="../css/jquery.fancybox.min.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/tgtable.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="../css/cubeportfolio.min.css" rel="stylesheet" /> -->
+    <link id="t-colors" href="../skins/default.css" rel="stylesheet" />
+    <link href="../css/languages.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../css/jquery.fancybox.min.css" />
 
 </head>
+
 <body>
 
 
-<div id="wrapper">
-	<!-- start header -->
-	<header>
-        <div class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+    <div id="wrapper">
+        <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" alt="" width="199" height="52" /></a>
-                </div>
-                <div class="navbar-collapse collapse ">
-                    <ul class="nav navbar-nav">
-                        <li><a class="root-menu" href="../index.html">Home</a></li>
-                        <li class="dropdown">
-                        	<a href="portfolio.html" class="dropdown-toggle root-menu" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Solutions <i class="fa fa-angle-down"></i></a>
-							<ul class="dropdown-menu">
-                                <li><a class="dropdown-menu-layer-1" href="../portfolio.html#factory">Industrial IoT</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="../applications/vibration-monitoring-for-reducer.html">&nbsp;&nbsp;&raquo; Vibration monitoring</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="../applications/solar-pv-module-level-monitoring.html">&nbsp;&nbsp;&raquo; Solar PV monitoring</a></li>
+                        <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" alt="" width="199" height="52" /></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                            <li><a class="root-menu" href="../index.html">Home</a></li>
+                            <li class="dropdown">
+                                <a href="portfolio.html" class="dropdown-toggle root-menu" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Solutions <i class="fa fa-angle-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-menu-layer-1" href="../portfolio.html#city">Smart City</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../applications/manhole-cover-monitoring.html">&nbsp;&nbsp;&raquo; Manhole cover monitoring</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../applications/water-level-monitoring.html">&nbsp;&nbsp;&raquo; Water Level Monitoring </a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../applications/parking-occupancy-detection.html">&nbsp;&nbsp;&raquo; Parking occupancy detection</a></li>
 
-                                <li><a class="dropdown-menu-layer-1" href="../portfolio.html#city">Smart City</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="../applications/manhole-cover-monitoring.html">&nbsp;&nbsp;&raquo; Manhole cover monitoring</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="../applications/parking-occupancy-detection.html">&nbsp;&nbsp;&raquo; Parking occupancy detection</a></li>
+                                    <li><a class="dropdown-menu-layer-1" href="../portfolio.html#factory">Industrial IoT</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../applications/vibration-monitoring-for-reducer.html">&nbsp;&nbsp;&raquo; Vibration monitoring</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../applications/solar-pv-module-level-monitoring.html">&nbsp;&nbsp;&raquo; Solar panel MLPE monitoring</a></li>
 
-                                <li><a class="dropdown-menu-layer-1" href="../portfolio.html#retail">Smart Retail</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="../applications/people-counting-system.html">&nbsp;&nbsp;&raquo; People counting system</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="../applications/smart-shelf-management-system.html">&nbsp;&nbsp;&raquo; Smart shelf management</a></li>
+                                    <li><a class="dropdown-menu-layer-1" href="../portfolio.html#retail">Smart Retail</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../applications/people-counting-system.html">&nbsp;&nbsp;&raquo; People counting system</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../applications/smart-shelf-management-system.html">&nbsp;&nbsp;&raquo; Smart shelf management</a></li>
 
-                                <li><a class="dropdown-menu-layer-1" href="../portfolio.html">View All</a></li>
-                            </ul>
-						</li>
-                        <li class="dropdown active">
-                            <a href="#" class="dropdown-toggle root-menu" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Products <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-menu-layer-1" href="../products.html#acquisition">Data Acquisition</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="../products/wiimine-vibration-sensor.html">&nbsp;&nbsp;&raquo; WiiMine</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="../products/wiiung-parking-lot-sensor.html">&nbsp;&nbsp;&raquo; WiiUNG</a></li>
-								<li><a class="dropdown-menu-layer-2" href="../products/wiilsw-manhole-cover-sensor.html">&nbsp;&nbsp;&raquo; WiiLSW</a></li>
-								<li><a class="dropdown-menu-layer-2" href="../products/wiiwla-water-level-monitor.html">&nbsp;&nbsp;&raquo; WiiWLA</a></li>
+                                    <li><a class="dropdown-menu-layer-1" href="../portfolio.html">View All</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle root-menu" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Products <i class="fa fa-angle-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-menu-layer-1" href="../products.html#acquisition">Data Acquisition</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../products/wiilsw-manhole-cover-sensor.html">&nbsp;&nbsp;&raquo; Manhole Cover Sensor</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../products/manhole-cover-sensor-lux .html">&nbsp;&nbsp;&raquo; Manhole Cover Tilt/Lux Sensor</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../products/wiiwla-water-level-monitor.html">&nbsp;&nbsp;&raquo;  Flood Water Level Sensor</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../products/wiiuwl-underground-submersed-water-level-sensor.html">&nbsp;&nbsp;&raquo; Integrated Water Level Sensor</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../products/wiiung-parking-lot-sensor.html">&nbsp;&nbsp;&raquo; Parking Occupancy Sensor</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../products/wiimine-vibration-sensor.html">&nbsp;&nbsp;&raquo; Wireless Vibration Sensor</a></li>
 
-                                <li><a class="dropdown-menu-layer-1" href="../products.html#transmission">Data Transmission</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="../products/wiigate-iot-gateway.html">&nbsp;&nbsp;&raquo; WiiGate</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="../products/hohnet-wireless-sensor-network.html">&nbsp;&nbsp;&raquo; HOHNet&trade;</a></li>
+                                    <li><a class="dropdown-menu-layer-1" href="../products.html#transmission">Data Transmission</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../products/wiigate-iot-gateway.html">&nbsp;&nbsp;&raquo;  IoT Gateway/Transmitter</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../products/hohnet-wireless-sensor-network.html">&nbsp;&nbsp;&raquo; HOHNet&trade;</a></li>
 
-                                <li><a class="dropdown-menu-layer-1" href="../products.html#process">Process & Analysis</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="../products/wiimatrix-iot-data-platform.html">&nbsp;&nbsp;&raquo; WiiMatrix</a></li>
-                                <li><a class="dropdown-menu-layer-1" href="../products.html#smartthings">Smart Things</a></li>
-                                <li><a class="dropdown-menu-layer-1" href="../products/cables.html">Cables</a></li>
-                                <li><a class="dropdown-menu-layer-1" href="../products.html">View All</a></li>
-                            </ul>
-                        </li>
-                        <li><a class="root-menu" href="../about.html">Company</a></li>
-                    </ul>
+                                    <li><a class="dropdown-menu-layer-1" href="../products.html#process">Process & Analysis</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="../products/wiimatrix-iot-data-platform.html">&nbsp;&nbsp;&raquo; WiiMatrix</a></li>
+                                    <li><a class="dropdown-menu-layer-1" href="../products.html#smartthings">Smart Things</a></li>
+                                    <li><a class="dropdown-menu-layer-1" href="../products/cables.html">Cables</a></li>
+                                    <li><a class="dropdown-menu-layer-1" href="../products.html">View All</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="root-menu" href="../about.html">Company</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-	</header>
-	<!-- end header -->
+        </header>
+        <!-- end header -->
 
-	<section id="inner-headline">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<ul class="breadcrumb">
-					<li><a href="../index.html"><i class="fa fa-home"></i> Home</a><i class="icon-angle-right"></i></li>
-					<li><a href="../products.html">IoT products</a><i class="icon-angle-right"></i></li>
-					<li class="active">WiiWLA</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	</section>
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="breadcrumb">
+                            <li><a href="../index.html"><i class="fa fa-home"></i> Home</a><i class="icon-angle-right"></i></li>
+                            <li><a href="../products.html">IoT products</a><i class="icon-angle-right"></i></li>
+                            <li class="active">Water Level Sensor</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-	<section id="content">
-	<div class="container">
+        <section id="content">
+            <div class="container">
 
-		<div class="row">
-			<div class="col-lg-9">
-				<h1 class="small">WiiWLA - The Water Level Monitor & Flood Detector</h1>
+                <div class="row">
+                    <div class="col-lg-9">
+                        <h1 class="small">Remote monitoring water level sensor/detector for street/tunnel/river/tank/well</h1>
 
-				<br />
-				<div  class="row">
-					<div class="col-sm-9 col-md-8">
-						<br /><br /><br />
-						<p class = "big-p-font">Deploy real-time water level monitoring to proect water rising problem.</p>
-					</div>
-					<div class="col-sm-3 col-md-4">
-						<img class="img-responsive" src="../img/products/sensor-water-level.jpg" alt="water level sensor node">
-					</div>
-				</div>
+                        <br />
+                        <div class="row">
+                            <div class="col-sm-9 col-md-8">
+                                <br /><br /><br />
+                                <p class="big-p-font">High/Medium/Low three water level monitoring and real time SMS/Email/Siren alert notification to prevent serious personal injury or asset lose</p>
+                            </div>
+                            <div class="col-sm-3 col-md-4">
+                                <img class="img-responsive" src="../img/products/sensor-water-level.jpg" alt="water level sensor node">
+                            </div>
+                        </div>
 
-				<ul class="nav nav-tabs">
-					<li class="active"><a href="#Overview" data-toggle="tab" class="tab-name"><i class="icon-briefcase"></i>Overview</a></li>
-					<li><a href="#Features" data-toggle="tab" class="tab-name">Features</a></li>
-					<li><a href="#Specifications" data-toggle="tab" class="tab-name">Spec</a></li>
-					<li><a href="#Installation" data-toggle="tab" class="tab-name">Install</a></li>
-					<li><a href="#Topology" data-toggle="tab" class="tab-name">Topology</a></li>
-					<li><a href="#Casestudy" data-toggle="tab" class="tab-name">Casestudy</a></li>
-					<li><a href="#Gallery" data-toggle="tab" class="tab-name">Gallery</a></li>
-				</ul>
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#Overview" data-toggle="tab" class="tab-name"><i class="icon-briefcase"></i>Overview</a></li>
+                            <li><a href="#Features" data-toggle="tab" class="tab-name">Features</a></li>
+                            <li><a href="#Specifications" data-toggle="tab" class="tab-name">Spec</a></li>
+                            <li><a href="#Installation" data-toggle="tab" class="tab-name">Install</a></li>
+                            <li><a href="#Topology" data-toggle="tab" class="tab-name">Topology</a></li>
+                            <li><a href="#Casestudy" data-toggle="tab" class="tab-name">Casestudy</a></li>
+                            <li><a href="#Gallery" data-toggle="tab" class="tab-name">Gallery</a></li>
+                        </ul>
 
-				<div class="tab-content">
-					<div class="tab-pane active" id="Overview">
-						<p>WiiHey Water Level Monitor/Flood Detector, using leading capacitive sensor to detect water surface position, built-in WiiHey Bore OS IoT operating system and GSM/GPRS communication module. When the water reaches the specified position, the system detects a change in the sensor signal, after filtering and analysis, it will send the message to WiiHey IoT server.</p>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="Overview">
+                                <p>WiiHey Water Level Detector is mainly consisted of: reliable capacitive sensor as core to detect water surface position, WiiHey Bore OS IoT operating system, NB-IOT communication module, and battery. When the water reaches
+                                    the specified position, the system detects the change and send the alert notification to WiiHey IoT server after filtering and analysis.</p>
 
-						<p>WiiHey Water Level Monitor/Flood Detector applies to : tap water, domestic water, river water, waste water, weak acid and alkaline water, water treatment chemicals, textile printing and dyeing water, industrial wastewater, etc. Special models can also be used in ultrapure water, reverse osmosis water or distillation.</p>
+                                <p>WiiHey Water Level Detector applies to : tap water, domestic water, river water, waste water, weak acid and alkaline water, water treatment chemicals, textile printing and dyeing water, industrial wastewater, etc. Special
+                                    models can also be used in ultrapure water, reverse osmosis water or distillation.</p>
 
-						<br />
-						<p>Appearance:</p>
-						<div align="center">
-							<img class="nobottom" src="../img/products/wiiwla/water-level-sensor-1.jpg" alt="" width="400" />
-						</div>
-						<div align="center">
-							<img class="nobottom" src="../img/products/wiiwla/water-level-sensor-2.jpg" alt="" width="720" />
-						</div>
+                                <br />
+                                <p>Appearance:</p>
+                                <div align="center">
+                                    <img class="nobottom" src="../img/products/wiiwla/water-level-sensor-1.jpg" alt="" width="400" />
+                                </div>
+                                <div align="center">
+                                    <img class="nobottom" src="../img/products/wiiwla/water-level-sensor-2.jpg" alt="" width="720" />
+                                </div>
 
-						<a href="https://mp.weixin.qq.com/s/eyI8iGDZDHkFAGtc5Zsrww" target="_blank">Click here for an on-site example.</a>
-					</div>
+                                <a href="https://mp.weixin.qq.com/s/eyI8iGDZDHkFAGtc5Zsrww" target="_blank">Click here for an on-site example.</a>
+                            </div>
 
-					<div class="tab-pane" id="Features">
-						<h4>Features</h4>
-						<ul>
-							<li>Stain resistance, anti-tilt, weak acid and alkali salt, able to work in the influence of magnetic field, metal body, water pressure change and raid of light, no dead zone;</li>
-							<li>Without any mechanical parts on the outside, Not afraid of the influence of floating objects;</li>
-							<li>With real-time clock function, it can perform periodic self-test reporting;</li>
-							<li>Support for setting reporting period;</li>
-							<li>Support to report the battery voltage;</li>
-							<li>Support the remote configuration;</li>
-						</ul>
-						<br />
+                            <div class="tab-pane" id="Features">
+                                <h4>Features</h4>
+                                <ul>
+                                    <li>Stain resistance, anti-tilt, weak acid and alkali salt, able to work in the influence of magnetic field, metal body, water pressure change and raid of light, no dead zone;</li>
+                                    <li>Without any mechanical parts on the outside, Not afraid of the influence of floating objects;</li>
+                                    <li>With real-time clock function, it can perform periodic self-test reporting;</li>
+                                    <li>Support for setting reporting period;</li>
+                                    <li>Support to report the battery voltage;</li>
+                                    <li>Support the remote configuration;</li>
+                                </ul>
+                                <br />
 
-						<h4>Applicable to...</h4>
-						<p>
-							tap water, domestic water, river water, waste water, weak acid and alkaline water, water treatment chemicals, textile printing and dyeing water, industrial wastewater
-						</p>
-						<br />
-					</div>
+                                <h4>Applicable to...</h4>
+                                <p>Tap water, domestic water, river water, waste water, weak acid and alkaline water, water treatment chemicals, textile printing and dyeing water, industrial wastewater.</p>
+                                <br />
+                            </div>
 
-					<div class="tab-pane" id="Specifications">
-						<div align="center">
-							<img class="nobottom" src="../img/products/wiiwla/spec-1.jpg" alt="" width="560" />
-						</div>
-						<div align="center">
-							<img class="nobottom" src="../img/products/wiiwla/spec-2.jpg" alt="" width="560" />
-						</div>
+                            <div class="tab-pane" id="Specifications">
+                                <table class="tgtable">
+                                    <thead>
+                                        <tr>
+                                            <strong>TECHNICAL SPECIFICATION</strong>
+                                        </tr>
+                                    </thead>
 
-					</div>
+                                    <tbody>
+                                        <tr>
+                                            <th colspan="2">Item</th>
+                                            <th>Content</th>
+                                        </tr>
+                                        <tr align="center">
+                                            <td colspan="2">Model No.</td>
+                                            <td>WH-WL3-NB-81</td>
+                                        </tr>
+                                        <tr align="center">
+                                            <td rowspan="3">Battery</td>
+                                            <td>Input voltage range</td>
+                                            <td>3.6V DC</td>
+                                        </tr>
+                                        <tr align="center">
+                                            <td>Lowest working <br>voltage</td>
+                                            <td>2.8V DC</td>
+                                        </tr>
+                                        <tr align="center">
+                                            <td>Battery capacity</td>
+                                            <td>6000mAh</td>
+                                        </tr>
+                                        <tr align="center">
+                                            <td rowspan="3">Power consumption</td>
+                                            <td>Sleep current</td>
+                                            <td>≤ 15 uA</td>
+                                        </tr>
+                                        <tr align="center">
+                                            <td>Maximum power<br>consumption</td>
+                                            <td>≤ 2W@ 3.6V</td>
+                                        </tr>
+                                        <tr align="center">
+                                            <td>Duration</td>
+                                            <td>≥8-12 months<br>(good network, 1 heartbeat per 3 days)</td>
+                                        </tr>
+                                        <tr align="center">
+                                            <td>Communication</td>
+                                            <td>Mobile Network</td>
+                                            <td>NB-IoT</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" rowspan="2">Measurement</td>
+                                            <td align="center">Detection cycle</td>
+                                            <td align="left">30 seconds to 1 hour can be set</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">Battery voltage</td>
+                                            <td align="left">Measuring range is 2.8-3.6V, error is ±0.2V</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">Number of alarms</td>
+                                            <td align="center">Configurable</td>
+                                            <td align="left">1-10 times or continuous alarm until manual release</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">Indicator</td>
+                                            <td align="center">LED</td>
+                                            <td align="left">Inside the device<br>(Represent the status of running or networking)</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" rowspan="5">Appearance and dimensions</td>
+                                            <td align="center">DIM.</td>
+                                            <td align="left">Sensor: φ 20X150mm<br>(Cable to sensor 0.5m-4m, can be customized)</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">Antenna</td>
+                                            <td align="left">Built-in FPC antenna</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">Material</td>
+                                            <td align="left">PC</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">Pressure resistance</td>
+                                            <td align="left">Within 20kg/cm<sup>2</sup></td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">Assembly</td>
+                                            <td align="left">Bolting</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">Safety</td>
+                                            <td align="center">Water-Proof</td>
+                                            <td align="left">IP68</td>
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+
+                                <br />
+
+                                <table class="tgtable">
+                                    <thead>
+                                        <tr>
+                                            <strong>ENVIRONMENTAL CONDITIONS</strong>
+                                        </tr>
+                                    </thead>
 
 
-					<div class="tab-pane" id="Installation">
-						<h4>Installation</h4>
-						<p>1) Assembly method : The Detetor can be installed freely, such as horizontal, vertical, oblique or other irregular and convenient method.</p>
+                                    <tbody align="center">
+                                        <tr>
+                                            <th>Item</th>
+                                            <th>Detailed Parameters</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Normal operating temperature ( &#8451)</td>
+                                            <td>-20 &#8451 ~ +65 &#8451</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Storage Temperature ( &#8451)</td>
+                                            <td>-20 &#8451 ~ +65 &#8451</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Relative Humidity</td>
+                                            <td>5 % ~ 100%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Atmospheric Pressure kPa</td>
+                                            <td>63.0～106.0 (below 4000m altitude)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
 
-						<p>2) Fixed method: The easiest way is that hang the Detector from upside. If it required to be fixed:  it support to used the threaded interface (DN20, ie 4 threaded interface) or used the pipe clamp.</p>
+                                <br />
 
-						<p>*Note : The Detetor should not be too close to the wall, Keep a certain distance from the wall, To prevent sundries form getting stuck.</p>
+                                <table class="tgtable">
+                                    <thead>
+                                        <tr>
+                                            <strong>SAFETY</strong>
+                                        </tr>
+                                    </thead>
 
-						<p>Please refer to the diagram below:</p>
-						<div align="center">
-							<img class="nobottom" src="../img/products/wiiwla/installation-1.jpg" alt="" width="560" />
-						</div>
 
-						<br><br>
+                                    <tbody align="left">
+                                        <tr>
+                                            <td>Communication response time</td>
+                                            <td>
+                                                < 60s</td>
+                                        </tr>
+                                        <tr>
+                                            <td>MTBF</td>
+                                            <td>≥ 30,000 hours</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Alarm data false positive rate</td>
+                                            <td>≤ 0.1%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Alarm data false negative rate</td>
+                                            <td>≤ 0.1%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Electromagnetic compatibility</td>
+                                            <td>Comply with IEC 61000-4-2, 3, 4, 5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Normal insulation resistance</td>
+                                            <td>≥ 100M Ω</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Insulation resistance under wet heat</td>
+                                            <td>≥ 2M Ω</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Leakage current</td>
+                                            <td>
+                                                < 5mA</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
 
-						<p>Use the wall pipe clamp directly on the wall as below:</p>
-						<div align="center">
-							<img class="nobottom" src="../img/products/wiiwla/installation-2.jpg" alt="" width="560" />
-						</div>
+                            </div>
 
-						<br><br>
 
-						<p>Use existing water pipes to secure with buckles as below:</p>
-						<div align="center">
-							<img class="nobottom" src="../img/products/wiiwla/installation-3.jpg" alt="" width="560" />
-						</div>
 
-					</div>
 
-					<div class="tab-pane" id="Topology">
-						<p>Topology:</p>
-						<br />
-						<img src="../img/products/wiiwla/topology.jpg" alt=""  class="img-responsive"  />
-					</div>
 
-					<div class="tab-pane" id="Casestudy">
-						<p>On-site casestudy:</p>
-						<br />
-						<p>A tunnel in Guangzhou, China:</p>
-						<div align="center">
-							<img src="../img/products/wiiwla/live-0.jpg" alt="" width="640" class="img-responsive"  />
-						</div>
 
-						<p>Water level sensors in the tunnel:</p>
-						<div align="center">
-							<img src="../img/products/wiiwla/live-2.jpg" alt="" width="560" class="img-responsive"  />
-						</div>
+                            <div class="tab-pane" id="Installation">
+                                <h4>Installation</h4>
+                                <p>1) Assembly method : The Detector can be installed freely, such as horizontal, vertical, oblique or other irregular and convenient method.</p>
 
-						<p>The warning sign at the entrance of the tunnel:</p>
-						<div align="center">
-							<img src="../img/products/wiiwla/live-3.jpg" alt="" width="560" class="img-responsive"  />
-						</div>
+                                <p>2) Fixed method: The easiest way is hanging the Detector from upside. It supports to use the threaded interface (DN20, ie 4 threaded interface) or use the pipe clamp if the sensor needs to be fixed.</p>
 
-						<p>The cloud based data dashboard:</p>
-						<div align="center">
-							<img src="../img/products/wiiwla/live-5.jpg" alt=""  class="img-responsive"  />
-						</div>
+                                <p>*Notice: The Detector should not be too close to the wall, keeping a certain distance from the wall could prevent the detectors getting stuck by other objects.</p>
 
-						<a href="https://mp.weixin.qq.com/s/eyI8iGDZDHkFAGtc5Zsrww" target="_blank">Click here for an on-site example.</a>
-					</div>
+                                <p>Please refer to the diagram below:</p>
+                                <div align="center">
+                                    <img class="nobottom" src="../img/products/wiiwla/installation-1.jpg" alt="" width="560" />
+                                </div>
 
-					<div class="tab-pane" id="Gallery">
-				        <div class="row text-center">
-				            <div class="col-md-4 col-sm-6">
-				                <div class="thumbnail">
-									<a data-fancybox="gallery"
-			                        data-srcset="../img/products/wiiwla/water-level-sensor-0.jpg"
-			                        data-caption="Water level sensor"
-			                        href="../img/products/wiiwla/water-level-sensor-0.jpg"><img src="../img/products/wiiwla/water-level-sensor-0.jpg" alt=""></a>
-			                        <p>Water level sensor</p>
-				                </div>
-				            </div>
+                                <br><br>
 
-				            <div class="col-md-4 col-sm-6">
-				                <div class="thumbnail">
-									<a data-fancybox="gallery"
-			                        data-srcset="../img/products/wiiwla/water-level-sensor-1.jpg"
-			                        data-caption="Water level sensor"
-			                        href="../img/products/wiiwla/water-level-sensor-1.jpg"><img src="../img/products/wiiwla/water-level-sensor-1.jpg" alt=""></a>
-			                        <p>Water level sensor</p>
-				                </div>
-				            </div>
+                                <p>Use the wall pipe clamp directly on the wall as below:</p>
+                                <div align="center">
+                                    <img class="nobottom" src="../img/products/wiiwla/installation-2.jpg" alt="" width="560" />
+                                </div>
 
-				            <div class="col-md-4 col-sm-6">
-				                <div class="thumbnail">
-									<a data-fancybox="gallery"
-			                        data-srcset="../img/products/wiiwla/water-level-sensor-2.jpg"
-			                        data-caption="Gateway and display"
-			                        href="../img/products/wiiwla/water-level-sensor-2.jpg"><img src="../img/products/wiiwla/water-level-sensor-2.jpg" alt=""></a>
-			                        <p>Gateway and display</p>
-				                </div>
-				            </div>
+                                <br><br>
 
-				        </div>
-				        <div class="row text-center">
+                                <p>Use existing water pipes to secure with buckles as below:</p>
+                                <div align="center">
+                                    <img class="nobottom" src="../img/products/wiiwla/installation-3.jpg" alt="" width="560" />
+                                </div>
 
-				            <div class="col-md-4 col-sm-6">
-				                <div class="thumbnail">
-									<a data-fancybox="gallery"
-			                        data-srcset="../img/products/wiiwla/water-level-sensor-3.jpg"
-			                        data-caption="The GPRS/NB-IoT Gateway"
-			                        href="../img/products/wiiwla/water-level-sensor-3.jpg"><img src="../img/products/wiiwla/water-level-sensor-3.jpg" alt=""></a>
-			                        <p>The GPRS/NB-IoT Gateway</p>
-				                </div>
-				            </div>
+                            </div>
 
-				            <div class="col-md-4 col-sm-6">
-				                <div class="thumbnail">
-									<a data-fancybox="gallery"
-			                        data-srcset="../img/products/wiiwla/sensor-manhole-1.jpg"
-			                        data-caption="Sensor integrated with manhole detector #1"
-			                        href="../img/products/wiiwla/sensor-manhole-1.jpg"><img src="../img/products/wiiwla/sensor-manhole-1.jpg" alt=""></a>
-			                        <p>Sensor integrated with manhole detector #1</p>
-				                </div>
-				            </div>
+                            <div class="tab-pane" id="Topology">
+                                <p>Topology:</p>
+                                <br />
+                                <img src="../img/products/wiiwla/topology2.jpg" alt="" class="img-responsive" />
+                            </div>
 
-				            <div class="col-md-4 col-sm-6">
-				                <div class="thumbnail">
-									<a data-fancybox="gallery"
-			                        data-srcset="../img/products/wiiwla/sensor-manhole-2.jpg"
-			                        data-caption="Sensor integrated with manhole detector #2"
-			                        href="../img/products/wiiwla/sensor-manhole-2.jpg"><img src="../img/products/wiiwla/sensor-manhole-2.jpg" alt=""></a>
-			                        <p>Sensor integrated with manhole detector #2</p>
-				                </div>
-				            </div>
+                            <div class="tab-pane" id="Casestudy">
+                                <p>On-site casestudy:</p>
+                                <br />
+                                <p>A tunnel in Guangzhou, China:</p>
+                                <div align="center">
+                                    <img src="../img/products/wiiwla/live-0.jpg" alt="" width="640" class="img-responsive" />
+                                </div>
 
-				        </div>
-				        <div class="row text-center">
+                                <p>Water level sensors in the tunnel:</p>
+                                <div align="center">
+                                    <img src="../img/products/wiiwla/live-2.jpg" alt="" width="560" class="img-responsive" />
+                                </div>
 
-				            <div class="col-md-4 col-sm-6">
-				                <div class="thumbnail">
-									<a data-fancybox="gallery"
-			                        data-srcset="../img/products/wiiwla/live-1.jpg"
-			                        data-caption="On-site picture #1"
-			                        href="../img/products/wiiwla/live-1.jpg"><img src="../img/products/wiiwla/live-1.jpg" alt=""></a>
-			                        <p>On-site picture #1</p>
-				                </div>
-				            </div>
+                                <p>The warning sign at the entrance of the tunnel:</p>
+                                <div align="center">
+                                    <img src="../img/products/wiiwla/live-3.jpg" alt="" width="560" class="img-responsive" />
+                                </div>
 
-				            <div class="col-md-4 col-sm-6">
-				                <div class="thumbnail">
-									<a data-fancybox="gallery"
-			                        data-srcset="../img/products/wiiwla/live-2.jpg"
-			                        data-caption="On-site picture #2"
-			                        href="../img/products/wiiwla/live-2.jpg"><img src="../img/products/wiiwla/live-2.jpg" alt=""></a>
-			                        <p>On-site picture #2</p>
-				                </div>
-				            </div>
+                                <p>The cloud based data dashboard:</p>
+                                <div align="center">
+                                    <img src="../img/products/wiiwla/live-5.jpg" alt="" class="img-responsive" />
+                                </div>
 
-				            <div class="col-md-4 col-sm-6">
-				                <div class="thumbnail">
-									<a data-fancybox="gallery"
-			                        data-srcset="../img/products/wiiwla/live-3.jpg"
-			                        data-caption="On-site picture #3"
-			                        href="../img/products/wiiwla/live-3.jpg"><img src="../img/products/wiiwla/live-3.jpg" alt=""></a>
-			                        <p>On-site picture #3</p>
-				                </div>
-				            </div>
-				        </div>
+                                <a href="https://mp.weixin.qq.com/s/eyI8iGDZDHkFAGtc5Zsrww" target="_blank">Click here for an on-site example.</a>
+                            </div>
 
-				         <div class="row text-center">
+                            <div class="tab-pane" id="Gallery">
+                                <div class="row text-center">
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="thumbnail">
+                                            <a data-fancybox="gallery" data-srcset="../img/products/wiiwla/water-level-sensor-0.jpg" data-caption="Water level sensor" href="../img/products/wiiwla/water-level-sensor-0.jpg"><img src="../img/products/wiiwla/water-level-sensor-0.jpg" alt=""></a>
+                                            <p>Water level sensor</p>
+                                        </div>
+                                    </div>
 
-				            <div class="col-md-4 col-sm-6">
-				                <div class="thumbnail">
-									<a data-fancybox="gallery"
-			                        data-srcset="../img/products/wiiwla/live-4.jpg"
-			                        data-caption="On-site picture #4"
-			                        href="../img/products/wiiwla/live-4.jpg"><img src="../img/products/wiiwla/live-4.jpg" alt=""></a>
-			                        <p>On-site picture #4</p>
-				                </div>
-				            </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="thumbnail">
+                                            <a data-fancybox="gallery" data-srcset="../img/products/wiiwla/water-level-sensor-1.jpg" data-caption="Water level sensor" href="../img/products/wiiwla/water-level-sensor-1.jpg"><img src="../img/products/wiiwla/water-level-sensor-1.jpg" alt=""></a>
+                                            <p>Water level sensor</p>
+                                        </div>
+                                    </div>
 
-				            <div class="col-md-4 col-sm-6">
-				                <div class="thumbnail">
-									<a data-fancybox="gallery"
-			                        data-srcset="../img/products/wiiwla/live-6.jpg"
-			                        data-caption="On-site picture #5"
-			                        href="../img/products/wiiwla/live-6.jpg"><img src="../img/products/wiiwla/live-6.jpg" alt=""></a>
-			                        <p>On-site picture #5</p>
-				                </div>
-				            </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="thumbnail">
+                                            <a data-fancybox="gallery" data-srcset="../img/products/wiiwla/water-level-sensor-2.jpg" data-caption="Gateway and display" href="../img/products/wiiwla/water-level-sensor-2.jpg"><img src="../img/products/wiiwla/water-level-sensor-2.jpg" alt=""></a>
+                                            <p>Gateway and display</p>
+                                        </div>
+                                    </div>
 
-				            <div class="col-md-4 col-sm-6">
-				                <div class="thumbnail">
-									<a data-fancybox="gallery"
-			                        data-srcset="../img/products/wiiwla/live-7.jpg"
-			                        data-caption="On-site picture #5"
-			                        href="../img/products/wiiwla/live-7.jpg"><img src="../img/products/wiiwla/live-7.jpg" alt=""></a>
-			                        <p>On-site picture #5</p>
-				                </div>
-				            </div>
-				        </div>
-					</div>
-				</div>
-			</div>
+                                </div>
+                                <div class="row text-center">
 
-			<div class="col-lg-3">
-				<aside class="right-sidebar">
-				<br />
-				<div class="widget">
-					<img src="../img/mesh_logo2.jpg" alt="" width="192"/>
-				</div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="thumbnail">
+                                            <a data-fancybox="gallery" data-srcset="../img/products/wiiwla/water-level-sensor-3.jpg" data-caption="The GPRS/NB-IoT Gateway" href="../img/products/wiiwla/water-level-sensor-3.jpg"><img src="../img/products/wiiwla/water-level-sensor-3.jpg" alt=""></a>
+                                            <p>The GPRS/NB-IoT Gateway</p>
+                                        </div>
+                                    </div>
 
-				 <div class="widget">
-				 	<h4 class="widgetheading">Tags</h4>
-				 	<ul class="tags">
-				 		<li><a href="../products.html#acquisition">Data acquisition</a></li>
-				 		<li><a href="../products.html">All</a></li>
-				 	</ul>
-				 </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="thumbnail">
+                                            <a data-fancybox="gallery" data-srcset="../img/products/wiiwla/sensor-manhole-1.jpg" data-caption="Sensor integrated with manhole detector #1" href="../img/products/wiiwla/sensor-manhole-1.jpg"><img src="../img/products/wiiwla/sensor-manhole-1.jpg" alt=""></a>
+                                            <p>Sensor integrated with manhole detector #1</p>
+                                        </div>
+                                    </div>
 
-				<br />
-				<div class="widget">
-					<h4 class="widgetheading">Downloads</h4>
-					<ul class="recent">
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="thumbnail">
+                                            <a data-fancybox="gallery" data-srcset="../img/products/wiiwla/sensor-manhole-2.jpg" data-caption="Sensor integrated with manhole detector #2" href="../img/products/wiiwla/sensor-manhole-2.jpg"><img src="../img/products/wiiwla/sensor-manhole-2.jpg" alt=""></a>
+                                            <p>Sensor integrated with manhole detector #2</p>
+                                        </div>
+                                    </div>
 
-						<li>
-							<img src="../img/pdf_icon.png" class="pull-left" alt=""  width="24" style="width: 25px!important;"/>
-							<h6><a href="../resources/spec-wiiwla-water-level-monitor.pdf">Spec: Water Level Monitor</a></h6>
-						</li>
+                                </div>
+                                <div class="row text-center">
 
-					</ul>
-				</div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="thumbnail">
+                                            <a data-fancybox="gallery" data-srcset="../img/products/wiiwla/live-1.jpg" data-caption="On-site picture #1" href="../img/products/wiiwla/live-1.jpg"><img src="../img/products/wiiwla/live-1.jpg" alt=""></a>
+                                            <p>On-site picture #1</p>
+                                        </div>
+                                    </div>
 
-				</aside>
-			</div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="thumbnail">
+                                            <a data-fancybox="gallery" data-srcset="../img/products/wiiwla/live-2.jpg" data-caption="On-site picture #2" href="../img/products/wiiwla/live-2.jpg"><img src="../img/products/wiiwla/live-2.jpg" alt=""></a>
+                                            <p>On-site picture #2</p>
+                                        </div>
+                                    </div>
 
-		</div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="thumbnail">
+                                            <a data-fancybox="gallery" data-srcset="../img/products/wiiwla/live-3.jpg" data-caption="On-site picture #3" href="../img/products/wiiwla/live-3.jpg"><img src="../img/products/wiiwla/live-3.jpg" alt=""></a>
+                                            <p>On-site picture #3</p>
+                                        </div>
+                                    </div>
+                                </div>
 
-	</div>
-	</section>
+                                <div class="row text-center">
 
-	<footer>
-	<div id="sub-footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6 col-md-6">
-					<div>
-		            	<p class="copyright text-muted ">Copyright &copy; 2016 - 2018 WiiHey Technology</p>
-		            	<p class="copyright text-muted ">沪ICP备16040630号</p>
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-6">
-					<ul class="social-network">
-						<li><a href="mailto:sales@wiihey.com" title="E-mail"><i class="fa fa-envelope-square"></i></a></li>
-						<li><a href="../about.html#contact" title="Telephone"><i class="fa fa-phone-square"></i></a></li>
-						<li><a href="https://www.facebook.com/wiiheycrop/" title="Facebook" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
-						<li><a href="https://twitter.com/gilbertjuly" title="Twitter" target="_blank" ><i class="fa fa-twitter-square"></i></a></li>
-						<li>
-							<div class="btn-group dropup">
-							  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="thumbnail">
+                                            <a data-fancybox="gallery" data-srcset="../img/products/wiiwla/live-4.jpg" data-caption="On-site picture #4" href="../img/products/wiiwla/live-4.jpg"><img src="../img/products/wiiwla/live-4.jpg" alt=""></a>
+                                            <p>On-site picture #4</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="thumbnail">
+                                            <a data-fancybox="gallery" data-srcset="../img/products/wiiwla/live-6.jpg" data-caption="On-site picture #5" href="../img/products/wiiwla/live-6.jpg"><img src="../img/products/wiiwla/live-6.jpg" alt=""></a>
+                                            <p>On-site picture #5</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="thumbnail">
+                                            <a data-fancybox="gallery" data-srcset="../img/products/wiiwla/live-7.jpg" data-caption="On-site picture #5" href="../img/products/wiiwla/live-7.jpg"><img src="../img/products/wiiwla/live-7.jpg" alt=""></a>
+                                            <p>On-site picture #5</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <aside class="right-sidebar">
+                            <br />
+                            <div class="widget">
+                                <img src="../img/mesh_logo2.jpg" alt="" width="192" />
+                            </div>
+
+                            <div class="widget">
+                                <h4 class="widgetheading">Tags</h4>
+                                <ul class="tags">
+                                    <li><a href="../products.html#acquisition">Data acquisition</a></li>
+                                    <li><a href="../products.html">All</a></li>
+                                </ul>
+                            </div>
+
+                            <br />
+                            <div class="widget">
+                                <h4 class="widgetheading">Downloads</h4>
+                                <ul class="recent">
+
+                                    <li>
+                                        <img src="../img/pdf_icon.png" class="pull-left" alt="" width="24" style="width: 25px!important;" />
+                                        <h6><a href="../resources/Spec. WiiWL3.pdf">Spec. WiiWL3</a></h6>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </aside>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <div id="sub-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div>
+                                <p class="copyright text-muted ">Copyright &copy; WiiHey Technologies 2021-2022</p>
+                                <p class="copyright text-muted "><a href="https://beian.miit.gov.cn">沪ICP备16040630号-1</a></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <ul class="social-network">
+                                <li><a href="mailto:sales@wiihey.com" title="E-mail"><i class="fa fa-envelope-square"></i></a></li>
+                                <li><a href="../about.html#contact" title="Telephone"><i class="fa fa-phone-square"></i></a></li>
+                                <li><a href="https://www.facebook.com/wiiheycrop/" title="Facebook" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+                                <li><a href="https://twitter.com/gilbertjuly" title="Twitter" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+                                <li>
+                                    <div class="btn-group dropup">
+                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 							    <span class="lang-sm lang-lbl" lang="en"></span> <span class="caret"></span>
 							  </button>
-							  <ul class="dropdown-menu " role="menu">
-							    <li><a href="http://www.wiihey.com/zh-CN/index.html" ><span class="lang-sm lang-lbl" lang="zh"></span></a></li>
-							    <li><a href="http://www.wiihey.com/en/index.html" ><span class="lang-sm lang-lbl" lang="en"></span></a></li>
-							  </ul>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	</footer>
+                                        <ul class="dropdown-menu " role="menu">
+                                            <li><a href="http://www.wiihey.com/zh-CN/index.html"><span class="lang-sm lang-lbl" lang="zh"></span></a></li>
+                                            <li><a href="http://www.wiihey.com/en/index.html"><span class="lang-sm lang-lbl" lang="en"></span></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
-</div>
+    </div>
 
-<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-<!-- <script src="../js/stellar.js"></script> -->
-<!-- <script src="../js/classie.js"></script> -->
-<!--<script src="../js/uisearch.js"></script>-->
-<!-- <script src="../js/jquery.cubeportfolio.min.js"></script> -->
-<!-- <script src="../js/google-code-prettify/prettify.js"></script> -->
-<!-- <script src="../js/animate.js"></script> -->
-<!-- <script src="../js/custom.js"></script> -->
-<script src="../js/jquery.fancybox.min.js"></script>
+    <!-- <script src="../js/stellar.js"></script> -->
+    <!-- <script src="../js/classie.js"></script> -->
+    <!--<script src="../js/uisearch.js"></script>-->
+    <!-- <script src="../js/jquery.cubeportfolio.min.js"></script> -->
+    <!-- <script src="../js/google-code-prettify/prettify.js"></script> -->
+    <!-- <script src="../js/animate.js"></script> -->
+    <!-- <script src="../js/custom.js"></script> -->
+    <script src="../js/jquery.fancybox.min.js"></script>
 
 
 
 </body>
+
 </html>

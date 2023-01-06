@@ -1,538 +1,561 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
-<meta charset="utf-8">
-<link href="img/favicon.ico" rel="shortcut icon">
-<title>WiiHey | Internet of Things</title>
+    <meta charset="utf-8">
+    <link href="img/favicon.ico" rel="shortcut icon">
+    <!--rel="shortcut icon"是网页标题+图标,herf是图片地址-->
+    <title>IoT Monitoring Sensors | Internet of Things | WiiHey</title>
 
-<meta name="author" content="Jiayan Li" />
-<meta name="keywords" content="Manhole sensor, Smart City, Manhole Cover Open Detector, NB-IoT">
-<meta name="description" content="IoT solution provider including assets management, manhole cover monitoring, smart parking, personal positioning for smart cities, smart retail.">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
-<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118765111-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <meta name="author" content="Jiayan Li" />
+    <meta name="keywords" content="IoT sensor, smart city, smart industry 4.0">
+    <meta name="description" content="WiiHey is dedicated in developing IoT (Internet of Things) monitoring sensors for smart city, smart traffic, and smart industry 4.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118765111-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-118765111-1');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-<!-- <link href="css/bootstrap.min.css" rel="stylesheet" /> -->
-<!-- <link href="https://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"> -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css" />
-<!-- <link href="plugins/flexslider/flexslider.css" rel="stylesheet" media="screen" /> -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.0/flexslider-min.css"  media="screen"/>
-<link href="css/style.css" rel="stylesheet" />
-<link id="t-colors" href="skins/default.css" rel="stylesheet" />
-<!-- <link href="css/cubeportfolio.min.css" rel="stylesheet" /> -->
-<link id="card" href="css/card.css" rel="stylesheet" />
-<link href="css/languages.min.css" rel="stylesheet" />
+        gtag('config', 'UA-118765111-1');
+    </script>
 
-
-<style>
-.morebutton {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 16px 16px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    margin: 2px 2px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet" /> -->
+    <!-- <link href="https://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css" />
+    <!-- <link href="plugins/flexslider/flexslider.css" rel="stylesheet" media="screen" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.0/flexslider-min.css" media="screen" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link id="t-colors" href="skins/default.css" rel="stylesheet" />
+    <!-- <link href="css/cubeportfolio.min.css" rel="stylesheet" /> -->
+    <link id="card" href="css/card.css" rel="stylesheet" />
+    <link href="css/languages.min.css" rel="stylesheet" />
 
 
-.buttonblack {
-    background-color: white;
-    color: black;
-    border: 1px solid #999999;
-}
-
-.buttonblack:hover {
-    background-color: #999999;
-    color: white;
-}
-</style>
+    <style>
+        .morebutton {
+            background-color: #4CAF50;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 16px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 2px 2px;
+            -webkit-transition-duration: 0.4s;
+            /* Safari */
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        
+        .buttonblack {
+            background-color: white;
+            color: black;
+            border: 1px solid #999999;
+        }
+        
+        .buttonblack:hover {
+            background-color: #999999;
+            color: white;
+        }
+    </style>
 
 
 </head>
+
 <body>
 
 
-<div id="wrapper">
-	<!-- start header -->
-	<header>
-        <div class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+    <div id="wrapper">
+        <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="" width="199" height="52" /></a>
-                </div>
-                <div class="navbar-collapse collapse ">
-                    <ul class="nav navbar-nav">
+                        <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="" width="199" height="52" /></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
 
-                        <li class="active"><a class="root-menu" href="index.html">Home</a></li>
-                        <li class="dropdown">
-                        	<a href="portfolio.html" class="dropdown-toggle root-menu" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Solutions <i class="fa fa-angle-down"></i></a>
-							<ul class="dropdown-menu">
-                                <li><a class="dropdown-menu-layer-1" href="portfolio.html#factory">Industrial IoT</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="applications/vibration-monitoring-for-reducer.html">&nbsp;&nbsp;&raquo; Vibration monitoring</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="applications/solar-pv-module-level-monitoring.html">&nbsp;&nbsp;&raquo; Solar PV monitoring</a></li>
+                            <li class="active"><a class="root-menu" href="index.html">Home</a></li>
+                            <li class="dropdown">
+                                <a href="portfolio.html" class="dropdown-toggle root-menu" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Solutions <i class="fa fa-angle-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-menu-layer-1" href="portfolio.html#city">Smart City</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="applications/manhole-cover-monitoring.html">&nbsp;&nbsp;&raquo; Manhole cover monitoring</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="applications/water-level-monitoring.html">&nbsp;&nbsp;&raquo; Water Level Monitoring</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="applications/parking-occupancy-detection.html">&nbsp;&nbsp;&raquo; Parking occupancy detection</a></li>
 
-                                <li><a class="dropdown-menu-layer-1" href="portfolio.html#city">Smart City</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="applications/manhole-cover-monitoring.html">&nbsp;&nbsp;&raquo; Manhole cover monitoring</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="applications/parking-occupancy-detection.html">&nbsp;&nbsp;&raquo; Parking occupancy detection</a></li>
+                                    <li><a class="dropdown-menu-layer-1" href="portfolio.html#factory">Industrial IoT</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="applications/vibration-monitoring-for-reducer.html">&nbsp;&nbsp;&raquo; Vibration monitoring</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="applications/solar-pv-module-level-monitoring.html">&nbsp;&nbsp;&raquo; Solar panel MLPE monitoring</a></li>
 
-                                <li><a class="dropdown-menu-layer-1" href="portfolio.html#retail">Smart Retail</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="applications/people-counting-system.html">&nbsp;&nbsp;&raquo; People counting system</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="applications/smart-shelf-management-system.html">&nbsp;&nbsp;&raquo; Smart shelf management</a></li>
+                                    <li><a class="dropdown-menu-layer-1" href="portfolio.html#retail">Smart Retail</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="applications/people-counting-system.html">&nbsp;&nbsp;&raquo; People counting system</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="applications/smart-shelf-management-system.html">&nbsp;&nbsp;&raquo; Smart shelf management</a></li>
 
-                                <li><a class="dropdown-menu-layer-1" href="portfolio.html">View All</a></li>
-                            </ul>
-						</li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle root-menu" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Products <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-menu-layer-1" href="products.html#acquisition">Data Acquisition</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="products/wiimine-vibration-sensor.html">&nbsp;&nbsp;&raquo; WiiMine</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="products/wiiung-parking-lot-sensor.html">&nbsp;&nbsp;&raquo; WiiUNG</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="products/wiilsw-manhole-cover-sensor.html">&nbsp;&nbsp;&raquo; WiiLSW</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="products/wiiwla-water-level-monitor.html">&nbsp;&nbsp;&raquo; WiiWLA</a></li>
+                                    <li><a class="dropdown-menu-layer-1" href="portfolio.html">View All</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle root-menu" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Products <i class="fa fa-angle-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-menu-layer-1" href="products.html#acquisition">Data Acquisition</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="products/wiilsw-manhole-cover-sensor.html">&nbsp;&nbsp;&raquo; Manhole Cover Sensor</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="products/manhole-cover-sensor-lux .html">&nbsp;&nbsp;&raquo; Manhole Cover Tilt/Lux Sensor</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="products/wiiwla-water-level-monitor.html">&nbsp;&nbsp;&raquo;  Flood Water Level Sensor</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="products/wiiuwl-underground-submersed-water-level-sensor.html">&nbsp;&nbsp;&raquo; Integrated Water Level Sensor</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="products/wiiung-parking-lot-sensor.html">&nbsp;&nbsp;&raquo; Parking Occupancy Sensor</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="products/wiimine-vibration-sensor.html">&nbsp;&nbsp;&raquo; Wireless Vibration Sensor</a></li>
 
-                                <li><a class="dropdown-menu-layer-1" href="products.html#transmission">Data Transmission</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="products/wiigate-iot-gateway.html">&nbsp;&nbsp;&raquo; WiiGate</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="products/hohnet-wireless-sensor-network.html">&nbsp;&nbsp;&raquo; HOHNet&trade;</a></li>
 
-                                <li><a class="dropdown-menu-layer-1" href="products.html#process">Process & Analysis</a></li>
-                                <li><a class="dropdown-menu-layer-2" href="products/wiimatrix-iot-data-platform.html">&nbsp;&nbsp;&raquo; WiiMatrix</a></li>
-                                <li><a class="dropdown-menu-layer-1" href="products.html#smartthings">Smart Things</a></li>
-                                <li><a class="dropdown-menu-layer-1" href="products/cables.html">Cables</a></li>
-                                <li><a class="dropdown-menu-layer-1" href="products.html">View All</a></li>
-                            </ul>
-                        </li>
-                        <li><a class="root-menu" href="about.html">Company</a></li>
-                    </ul>
+                                    <li><a class="dropdown-menu-layer-1" href="products.html#transmission">Data Transmission</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="products/wiigate-iot-gateway.html">&nbsp;&nbsp;&raquo;  IoT Gateway/Transmitter</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="products/hohnet-wireless-sensor-network.html">&nbsp;&nbsp;&raquo; HOHNet&trade;</a></li>
+
+                                    <li><a class="dropdown-menu-layer-1" href="products.html#process">Process & Analysis</a></li>
+                                    <li><a class="dropdown-menu-layer-2" href="products/wiimatrix-iot-data-platform.html">&nbsp;&nbsp;&raquo; WiiMatrix</a></li>
+                                    <li><a class="dropdown-menu-layer-1" href="products.html#smartthings">Smart Things</a></li>
+                                    <li><a class="dropdown-menu-layer-1" href="products/cables.html">Cables</a></li>
+                                    <li><a class="dropdown-menu-layer-1" href="products.html">View All</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="root-menu" href="about.html">Company</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-	</header>
-	<!-- end header -->
+        </header>
+        <!-- end header -->
 
-	<section id="featured" class="bg">
+        <section id="featured" class="bg">
 
-	<!-- start slider -->
-	<div class="container">
-		<div class="row">
-			<div>
-			<!-- Slider -->
-		        <div id="main-slider" class="main-slider flexslider">
-		            <ul class="slides">
-		              <li>
-		                <img src="img/slides/flexslider/shanghai8.jpg" alt="Shanghai IoT Center" class="index-scroll-img"/>
-		                <div class="flex-caption">
-		                    <h3>Enabling a more connected world</h3>
-							<p>WiiHey offers IoT solutions combining smart sensors, data transmissions, AI-based analytics to connect everything and drive positive business results.</p>
-							<a href="#glance" class="btn btn-theme">Learn More</a>
-		                </div>
-		              </li>
+            <!-- start slider -->
+            <div class="container">
+                <div class="row">
+                    <div>
+                        <!-- Slider -->
+                        <div id="main-slider" class="main-slider flexslider">
+                            <ul class="slides">
+                                <li>
+                                    <img src="img/slides/flexslider/shanghai8.jpg" alt="Shanghai IoT Center" class="index-scroll-img" />
+                                    <div class="flex-caption">
+                                        <h3>Enabling a more connected world</h3>
+                                        <p>WiiHey offers IoT solutions combining smart sensors, data transmissions, AI-based analytics to connect everything and drive positive business results.</p>
+                                        <a href="#glance" class="btn btn-theme">Learn More</a>
+                                    </div>
+                                </li>
 
-		              <li>
-		                <img src="img/slides/flexslider/wiimine1.jpg" alt="Remote condition monitoring" class="index-scroll-img"/>
-		                <div class="flex-caption">
-		                    <h3>Asset maintenance through IoT</h3>
-							<p>Time to move away from human inspections, WiiHey helps you visualize asset conditions, anticipate maintenance needs and prevent potential failures.</p>
-							<a href="portfolio.html#maintenance" class="btn btn-theme">Learn More</a>
-		                </div>
-					  </li>
-		            </ul>
-		        </div>
-			<!-- end slider -->
-			</div>
-		</div>
-	</div>
-	</section>
+                                <li>
+                                    <img src="img/slides/flexslider/wiimine1.jpg" alt="Remote condition monitoring" class="index-scroll-img" />
+                                    <div class="flex-caption">
+                                        <h3>Asset maintenance through IoT</h3>
+                                        <p>Time to move away from human inspections, WiiHey helps you visualize asset conditions, anticipate maintenance needs and prevent potential failures.</p>
+                                        <a href="portfolio.html#maintenance" class="btn btn-theme">Learn More</a>
+                                    </div>
+                                </li>
 
-	<section id="content">
-		<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="text-center">
-					<h1 class="index-h1-digital">Digital Transformation Starts Here</h1>
-					<p>Foundational components in an IoT process...</p>
-				</div>
-			</div>
-		</div>
-		</div>
+                                <li>
+                                    <img src="img/slides/flexslider/Banner 3.jpg" alt="Banner" class="index-scroll-img" />
+                                    <div class="flex-caption">
+                                        <h3>Manhole Cover Open Sensor</h3>
+                                        <p>24 hours' remote monitoring, easy installation, simple maintenance, and long lifespan.</p>
+                                        <a href="products/wiilsw-manhole-cover-sensor.html" class="btn btn-theme">Learn More</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- end slider -->
+                    </div>
+                </div>
+            </div>
+        </section>
 
-		<div class="container">
-		<div class="row">
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-center">
+                            <h1 class="index-h1-digital">Digital Transformation Starts Here</h1>
+                            <p>Foundational components in an IoT process...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-			<div class="col-lg-12">
-					<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-						<div class="box">
-							<div class="aligncenter">
-								<div class="icon">
-								<i class="fa fa-download fa-4x"></i>
-								</div>
-								<h4>Data Acquisition</h4>
-							</div>
-						</div>
-					</div>
-					<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-						<div class="box">
-							<div class="aligncenter">
-								<div class="icon">
-								<i class="fa fa-wifi fa-4x"></i>
-								</div>
-								<h4>Transmission</h4>
-							</div>
-						</div>
-					</div>
-					<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-						<div class="box">
-							<div class="aligncenter">
-								<div class="icon">
-								<!-- <i class="fa fa-cubes fa-5x"></i> -->
-								<i class="fa fa-mixcloud fa-4x"></i>
-								</div>
-								<h4>Analysis</h4>
-							</div>
-						</div>
-					</div>
-					<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-						<div class="box">
-							<div class="aligncenter">
-								<div class="icon">
-								<!-- <i class="fa fa-puzzle-piece fa-5x"></i> -->
-								<i class="fa fa-cogs fa-4x"></i>
-								</div>
-								<h4>Decision & Action</h4>
-							</div>
-						</div>
-					</div>
-			</div>
+            <div class="container">
+                <div class="row">
 
-		</div>
-		</div>
+                    <div class="col-lg-12">
+                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                            <div class="box">
+                                <div class="aligncenter">
+                                    <div class="icon">
+                                        <i class="fa fa-download fa-4x"></i>
+                                    </div>
+                                    <h4>Data Acquisition</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                            <div class="box">
+                                <div class="aligncenter">
+                                    <div class="icon">
+                                        <i class="fa fa-wifi fa-4x"></i>
+                                    </div>
+                                    <h4>Transmission</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                            <div class="box">
+                                <div class="aligncenter">
+                                    <div class="icon">
+                                        <!-- <i class="fa fa-cubes fa-5x"></i> -->
+                                        <i class="fa fa-mixcloud fa-4x"></i>
+                                    </div>
+                                    <h4>Analysis</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                            <div class="box">
+                                <div class="aligncenter">
+                                    <div class="icon">
+                                        <!-- <i class="fa fa-puzzle-piece fa-5x"></i> -->
+                                        <i class="fa fa-cogs fa-4x"></i>
+                                    </div>
+                                    <h4>Decision & Action</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-		<!-- divider -->
-		<div class="container divider">
-		<div class="row">
-			<div class="col-lg-12">
-				<br />
-			</div>
-		</div>
-		</div>
-		<!-- end divider -->
+                </div>
+            </div>
 
-		<div class="container">
-		<div class="row">
-			<div class="col-md-6">
-				<div class="text-left">
-					<br /><br /><br />
-					<h3>Measure variables & digitize everything</h3>
-					<p>As MEMS technology develops, new sensors have advantages of higher integration, higher sensitivity and lower cost. It eases the job of data acquisition from connected devices, assets, people and environments. Digitizing everything is no longer a dream.</p>
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="text-right">
-                    <img src="img/slides/icons/physicals2.jpg" alt="IoT measure physics" width="360"/>
-				</div>
-			</div>
-		</div>
-		</div>
+            <!-- divider -->
+            <div class="container divider">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <br />
+                    </div>
+                </div>
+            </div>
+            <!-- end divider -->
 
-		<div class="container">
-		<div class="row">
-			<div class="col-md-6">
-				<div class="text-left">
-                    <img src="img/slides/icons/antenna2.jpg" alt="IoT measure physics" width="360"/>
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="text-right">
-					<br /><br /><br />
-					<h3>Deploy a long-rang wireless network</h3>
-					<p>WiiHey uses narrow-band radio technologies (such as NB-IoT, Sigfox, HOHNet&trade;) for wireless communications. Our wireless sensor networks can span miles and be competent in many applications – whether the need is to blanket a factory in sensors or control the streetlights of an entire city.</p>
-				</div>
-			</div>
-		</div>
-		</div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="text-left">
+                            <br /><br /><br />
+                            <h3>Measure variables & digitize everything</h3>
+                            <p>As MEMS technology develops, new sensors have advantages of higher integration, higher sensitivity and lower cost. It eases the job of data acquisition from connected devices, assets, people and environments. Digitizing everything
+                                is no longer a dream.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-right">
+                            <img src="img/slides/icons/physicals2.jpg" alt="IoT measure physics" width="360" />
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-		<div class="container">
-		<div class="row">
-			<div class="col-md-6">
-				<div class="text-left">
-					<br /><br /><br />
-					<h3>Turn data into actionable insights</h3>
-					<p>Data is essential in an digital transformation process. We help you analyze data based on MathEngine and AI-based algorithms, whether it is aimed for retailing or industrial applications, you can benefit from continuously monitoring and gain valuable insights from sensors and data.</p>
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="text-right">
-                    <img src="img/slides/icons/bigdata2.jpg" alt="IoT measure physics" width="360"/>
-				</div>
-			</div>
-		</div>
-		</div>
-		<!-- divider -->
-		<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="solidline">
-				</div>
-			</div>
-		</div>
-		</div>
-		<!-- end divider -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="text-left">
+                            <img src="img/slides/icons/antenna2.jpg" alt="IoT measure physics" width="360" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-right">
+                            <br /><br /><br />
+                            <h3>Deploy a long-rang wireless network</h3>
+                            <p>WiiHey uses narrow-band radio technologies (such as NB-IoT, Sigfox, HOHNet&trade;) for wireless communications. Our wireless sensor networks can span miles and be competent in many applications – whether the need is to blanket
+                                a factory in sensors or control the streetlights of an entire city.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-
-		<!-- Portfolio Projects -->
-		<div class="container">
-		<div class="row">
-			<div class="col-lg-12 text-center" id="glance">
-				<h2>IoT solutions at a glance</h2>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-lg-4 col-md-4 sb-preview text-center">
-			<div class="img-thumbnail">
-				<h3>Industrial IoT</h3>
-
-				<div class="card h-100">
-					<a class="sb-preview-img" href="applications/vibration-monitoring-for-reducer.html">
-						<img class="card-img-top img-fluid" src="img/applications/category/gear.jpg" alt="Vibration Monitoring System"/>
-					</a>
-					<div class="card-block">
-						<h4 class="card-title">Vibration monitoring of speed reducer</h4>
-					</div>
-					<div class="card-footer">
-						<a href="applications/vibration-monitoring-for-reducer.html" class="btn btn-theme">Learn more</a>
-					</div>
-
-					<br />
-
-					<a class="sb-preview-img" href="applications/solar-pv-module-level-monitoring.html">
-						<img class="card-img-top img-fluid" src="img/applications/category/solar2.jpg" alt="Generic Data Loggers"/>
-					</a>
-					<div class="card-block">
-						<h4 class="card-title">Solar PV monitoring</h4>
-					</div>
-					<div class="card-footer">
-						<a href="applications/solar-pv-module-level-monitoring.html" class="btn btn-theme">Learn more</a>
-					</div>
-					<!-- <div class="badge-new">New!</div> -->
-				</div>
-			</div>
-			</div>
-
-			<div class="col-lg-4 col-md-4 sb-preview text-center">
-			<div class="img-thumbnail">
-				<h3>Smart City</h3>
-
-				<div class="card h-100">
-					<a class="sb-preview-img" href="applications/manhole-cover-monitoring.html">
-						<img class="card-img-top img-fluid" src="img/applications/category/manhole3.jpg" alt="Monitoring Manhole Covers"/>
-					</a>
-					<div class="card-block">
-						<h4 class="card-title">Manhole cover monitoring</h4>
-					</div>
-					<div class="card-footer">
-						<a href="applications/manhole-cover-monitoring.html" class="btn btn-theme">Learn more</a>
-					</div>
-
-					<br />
-
-					<a class="sb-preview-img" href="applications/parking-occupancy-detection.html">
-						<img class="card-img-top img-fluid" src="img/applications/category/parking4.jpg" alt="Smart Packing Lot Detector"/>
-					</a>
-					<div class="card-block">
-						<h4 class="card-title">Parking occupancy detection</h4>
-					</div>
-					<div class="card-footer">
-						<a href="applications/parking-occupancy-detection.html" class="btn btn-theme">Learn more</a>
-					</div>
-					<!-- <div class="badge-new">New!</div> -->
-				</div>
-			</div>
-			</div>
-
-			<div class="col-lg-4 col-md-4 sb-preview text-center">
-			<div class="img-thumbnail">
-				<h3>Smart Retail</h3>
-
-				<div class="card h-100">
-					<a class="sb-preview-img" href="applications/people-counting-system.html">
-						<img class="card-img-top img-fluid" src="img/applications/category/retail2.jpg" alt="People Counting & Customer Tracking"/>
-					</a>
-					<div class="card-block">
-						<h4 class="card-title">People counting for retail analytics</h4>
-					</div>
-					<div class="card-footer">
-						<a href="applications/people-counting-system.html" class="btn btn-theme">Learn more</a>
-					</div>
-					<!-- <div class="badge-new">New!</div> -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="text-left">
+                            <br /><br /><br />
+                            <h3>Turn data into actionable insights</h3>
+                            <p>Data is essential in an digital transformation process. We help you analyze data based on MathEngine and AI-based algorithms, whether it is aimed for retailing or industrial applications, you can benefit from continuously monitoring
+                                and gain valuable insights from sensors and data.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-right">
+                            <img src="img/slides/icons/bigdata2.jpg" alt="IoT measure physics" width="360" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- divider -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="solidline">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end divider -->
 
 
-					<br />
+            <!-- Portfolio Projects -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center" id="glance">
+                        <h2>IoT solutions at a glance</h2>
+                    </div>
+                </div>
 
-					<a class="sb-preview-img" href="applications/smart-shelf-management-system.html">
-						<img class="card-img-top img-fluid" src="img/applications/category/shelf.jpg" alt="smart shelves for cutomer behavior analysis "/>
-					</a>
-					<div class="card-block">
-						<h4 class="card-title">Smart shelf-management system</h4>
-					</div>
-					<div class="card-footer">
-						<a href="applications/smart-shelf-management-system.html" class="btn btn-theme">Learn more</a>
-					</div>
-					<!-- <div class="badge-new">New!</div> -->
-				</div>
-			</div>
-			</div>
-		</div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 sb-preview text-center">
+                        <div class="img-thumbnail">
+                            <h3>Industrial IoT</h3>
 
-		<div class="row" align="center">
-			<div class="cbp-l-loadMore-button">
-				<a href="portfolio.html" class="morebutton buttonblack">View all IoT solutions</a>
-			</div>
+                            <div class="card h-100">
+                                <a class="sb-preview-img" href="applications/vibration-monitoring-for-reducer.html">
+                                    <img class="card-img-top img-fluid" src="img/applications/category/gear.jpg" alt="Vibration Monitoring System" />
+                                </a>
+                                <div class="card-block">
+                                    <h4 class="card-title">Vibration monitoring of speed reducer</h4>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="applications/vibration-monitoring-for-reducer.html" class="btn btn-theme">Learn more</a>
+                                </div>
 
-		</div>
-		</div>
+                                <br />
+
+                                <a class="sb-preview-img" href="applications/solar-pv-module-level-monitoring.html">
+                                    <img class="card-img-top img-fluid" src="img/applications/category/solar2.jpg" alt="Generic Data Loggers" />
+                                </a>
+                                <div class="card-block">
+                                    <h4 class="card-title">Solar panel MLPE monitoring</h4>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="applications/solar-pv-module-level-monitoring.html" class="btn btn-theme">Learn more</a>
+                                </div>
+                                <!-- <div class="badge-new">New!</div> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 sb-preview text-center">
+                        <div class="img-thumbnail">
+                            <h3>Smart City</h3>
+
+                            <div class="card h-100">
+                                <a class="sb-preview-img" href="applications/manhole-cover-monitoring.html">
+                                    <img class="card-img-top img-fluid" src="img/applications/category/manhole3.jpg" alt="Monitoring Manhole Covers" />
+                                </a>
+                                <div class="card-block">
+                                    <h4 class="card-title">Manhole cover monitoring</h4>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="applications/manhole-cover-monitoring.html" class="btn btn-theme">Learn more</a>
+                                </div>
+
+                                <br />
+
+                                <a class="sb-preview-img" href="applications/parking-occupancy-detection.html">
+                                    <img class="card-img-top img-fluid" src="img/applications/category/parking4.jpg" alt="Smart Packing Lot Detector" />
+                                </a>
+                                <div class="card-block">
+                                    <h4 class="card-title">Parking occupancy detection</h4>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="applications/parking-occupancy-detection.html" class="btn btn-theme">Learn more</a>
+                                </div>
+                                <!-- <div class="badge-new">New!</div> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 sb-preview text-center">
+                        <div class="img-thumbnail">
+                            <h3>Smart Retail</h3>
+
+                            <div class="card h-100">
+                                <a class="sb-preview-img" href="applications/people-counting-system.html">
+                                    <img class="card-img-top img-fluid" src="img/applications/category/retail2.jpg" alt="People Counting & Customer Tracking" />
+                                </a>
+                                <div class="card-block">
+                                    <h4 class="card-title">People counting for retail analytics</h4>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="applications/people-counting-system.html" class="btn btn-theme">Learn more</a>
+                                </div>
+                                <!-- <div class="badge-new">New!</div> -->
 
 
-	</section>
+                                <br />
+
+                                <a class="sb-preview-img" href="applications/smart-shelf-management-system.html">
+                                    <img class="card-img-top img-fluid" src="img/applications/category/shelf.jpg" alt="smart shelves for cutomer behavior analysis " />
+                                </a>
+                                <div class="card-block">
+                                    <h4 class="card-title">Smart shelf-management system</h4>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="applications/smart-shelf-management-system.html" class="btn btn-theme">Learn more</a>
+                                </div>
+                                <!-- <div class="badge-new">New!</div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" align="center">
+                    <div class="cbp-l-loadMore-button">
+                        <a href="portfolio.html" class="morebutton buttonblack">View all IoT solutions</a>
+                    </div>
+
+                </div>
+            </div>
 
 
-	<footer>
-	<div id="sub-footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 col-lg-6 col-md-6">
-					<div>
-		            	<p class="copyright text-muted ">Copyright &copy; 2016 - 2018 WiiHey Technology</p>
-		            	<p class="copyright text-muted ">沪ICP备16040630号</p>
-					</div>
-				</div>
-				<div class="col-xs-12 col-lg-6 col-md-6">
-					<ul class="social-network">
-						<li><a href="mailto:sales@wiihey.com" title="E-mail"><i class="fa fa-envelope-square"></i></a></li>
-						<li><a href="about.html#contact" title="Telephone"><i class="fa fa-phone-square"></i></a></li>
-						<li><a href="https://www.facebook.com/wiiheycrop/" title="Facebook" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
-						<li><a href="https://twitter.com/gilbertjuly" title="Twitter" target="_blank" ><i class="fa fa-twitter-square"></i></a></li>
-						<li>
-							<div class="btn-group dropup">
-							  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        </section>
+
+
+        <footer>
+            <div id="sub-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-lg-6 col-md-6">
+                            <div>
+                                <p class="copyright text-muted ">Copyright &copy; WiiHey Technologies 2021-2022</p>
+                                <p class="copyright text-muted "><a href="https://beian.miit.gov.cn">沪ICP备16040630号-1</a></p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-lg-6 col-md-6">
+                            <ul class="social-network">
+                                <li><a href="mailto:sales@wiihey.com" title="E-mail"><i class="fa fa-envelope-square"></i></a></li>
+                                <li><a href="about.html#contact" title="Telephone"><i class="fa fa-phone-square"></i></a></li>
+                                <li><a href="https://www.facebook.com/wiiheycrop/" title="Facebook" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+                                <li><a href="https://twitter.com/gilbertjuly" title="Twitter" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+                                <li>
+                                    <div class="btn-group dropup">
+                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 							    <span class="lang-sm lang-lbl" lang="en"></span> <span class="caret"></span>
 							  </button>
-							  <ul class="dropdown-menu " role="menu">
-							    <li><a href="http://www.wiihey.com/zh-CN/index.html" ><span class="lang-sm lang-lbl" lang="zh"></span></a></li>
-							    <li><a href="http://www.wiihey.com/en/index.html" ><span class="lang-sm lang-lbl" lang="en"></span></a></li>
-							  </ul>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	</footer>
+                                        <ul class="dropdown-menu " role="menu">
+                                            <li><a href="http://www.wiihey.com/zh-CN/index.html"><span class="lang-sm lang-lbl" lang="zh"></span></a></li>
+                                            <li><a href="http://www.wiihey.com/en/index.html"><span class="lang-sm lang-lbl" lang="en"></span></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
-</div>
+    </div>
 
-<a href="#main-slider" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <a href="#main-slider" class="scrollup"><i class="fa fa-angle-up active"></i></a>
 
-<!-- Placed at the end of the document so the pages load faster -->
-<!-- <script src="js/jquery.min.js"></script> -->
-<!-- <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<!-- <script src="js/jquery.easing.1.3.js"></script> -->
-<!-- <script src="https://cdn.bootcss.com/jquery-easing/1.3/jquery.easing.min.js"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<!-- <script src="js/bootstrap.min.js"></script> -->
-<!-- <script src="https://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<!-- <script src="plugins/flexslider/jquery.flexslider-min.js"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.0/jquery.flexslider-min.js"></script>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- <script src="js/jquery.min.js"></script> -->
+    <!-- <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- <script src="js/jquery.easing.1.3.js"></script> -->
+    <!-- <script src="https://cdn.bootcss.com/jquery-easing/1.3/jquery.easing.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <!-- <script src="https://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!-- <script src="plugins/flexslider/jquery.flexslider-min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.0/jquery.flexslider-min.js"></script>
 
-<!-- <script src="js/stellar.js"></script> -->
-<!-- <script src="js/classie.js"></script> -->
-<!-- <script src="js/uisearch.js"></script> -->
-<!-- <script src="js/jquery.cubeportfolio.min.js"></script> -->
-<!-- <script src="js/google-code-prettify/prettify.js"></script> -->
-<!-- <script src="js/animate.js"></script> -->
-<!-- <script src="js/custom.js"></script> -->
+    <!-- <script src="js/stellar.js"></script> -->
+    <!-- <script src="js/classie.js"></script> -->
+    <!-- <script src="js/uisearch.js"></script> -->
+    <!-- <script src="js/jquery.cubeportfolio.min.js"></script> -->
+    <!-- <script src="js/google-code-prettify/prettify.js"></script> -->
+    <!-- <script src="js/animate.js"></script> -->
+    <!-- <script src="js/custom.js"></script> -->
 
-<script type="text/javascript">
-$(document).on('click', 'a[href^="#"]', function (event) {
-    event.preventDefault();
+    <script type="text/javascript">
+        $(document).on('click', 'a[href^="#"]', function(event) {
+            event.preventDefault();
 
-    $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
-    }, 500);
-});
-</script>
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 500);
+        });
+    </script>
 
-<script>
-window.onload = function()
-{
-	// detect IE8 and above, and edge
-	if (document.documentMode ) {
-	    alert('Your Internet Explorer doesn\'t support all features in this site. For a more enjoyable experience, try a different browser like Firefox, Safari, Chrome!');
-	}
-}
-</script>
+    <script>
+        window.onload = function() {
+            // detect IE8 and above, and edge
+            if (document.documentMode) {
+                alert('Your Internet Explorer doesn\'t support all features in this site. For a more enjoyable experience, try a different browser like Firefox, Safari, Chrome!');
+            }
+        }
+    </script>
 
 
-<script type="text/javascript">
-jQuery(document).ready(function($) {
-	$('.testimonialslide').flexslider({
-	animation: "slide",
-	slideshow: false,
-	directionNav:false,
-	controlNav: true
-	});
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $('.testimonialslide').flexslider({
+                animation: "slide",
+                slideshow: false,
+                directionNav: false,
+                controlNav: true
+            });
 
-	$('.postslider').flexslider({
-        // Primary Controls
-        controlNav          : true,              //Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
-        directionNav        : true,              //Boolean: Create navigation for previous/next navigation? (true/false)
-       prevText: "",           //String: Set the text for the "previous" directionNav item
-    nextText: "",               //String: Set the text for the "next" directionNav item
-        // Special properties
-        controlsContainer   : "",                //{UPDATED} Selector: USE CLASS SELECTOR. Declare which container the navigation elements should be appended too. Default container is the FlexSlider element. Example use would be ".flexslider-container". Property is ignored if given element is not found.
-        manualControls      : "",                //Selector: Declare custom control navigation. Examples would be ".flex-control-nav li" or "#tabs-nav li img", etc. The number of elements in your controlNav should match the number of slides/tabs.
-        sync                : "",                //{NEW} Selector: Mirror the actions performed on this slider with another slider. Use with care.
-        asNavFor            : "",                //{NEW} Selector: Internal property exposed for turning the slider into a thumbnail navigation for another slider
-	});
+            $('.postslider').flexslider({
+                // Primary Controls
+                controlNav: true, //Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
+                directionNav: true, //Boolean: Create navigation for previous/next navigation? (true/false)
+                prevText: "", //String: Set the text for the "previous" directionNav item
+                nextText: "", //String: Set the text for the "next" directionNav item
+                // Special properties
+                controlsContainer: "", //{UPDATED} Selector: USE CLASS SELECTOR. Declare which container the navigation elements should be appended too. Default container is the FlexSlider element. Example use would be ".flexslider-container". Property is ignored if given element is not found.
+                manualControls: "", //Selector: Declare custom control navigation. Examples would be ".flex-control-nav li" or "#tabs-nav li img", etc. The number of elements in your controlNav should match the number of slides/tabs.
+                sync: "", //{NEW} Selector: Mirror the actions performed on this slider with another slider. Use with care.
+                asNavFor: "", //{NEW} Selector: Internal property exposed for turning the slider into a thumbnail navigation for another slider
+            });
 
-	$('.main-slider').flexslider({
-        // Primary Controls
-        controlNav          : true,              //Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
-        directionNav        : true,              //Boolean: Create navigation for previous/next navigation? (true/false)
-       prevText: "",           //String: Set the text for the "previous" directionNav item
-    nextText: "",               //String: Set the text for the "next" directionNav item
-        // Special properties
-        controlsContainer   : "",                //{UPDATED} Selector: USE CLASS SELECTOR. Declare which container the navigation elements should be appended too. Default container is the FlexSlider element. Example use would be ".flexslider-container". Property is ignored if given element is not found.
-        manualControls      : "",                //Selector: Declare custom control navigation. Examples would be ".flex-control-nav li" or "#tabs-nav li img", etc. The number of elements in your controlNav should match the number of slides/tabs.
-        sync                : "",                //{NEW} Selector: Mirror the actions performed on this slider with another slider. Use with care.
-        asNavFor            : "",                //{NEW} Selector: Internal property exposed for turning the slider into a thumbnail navigation for another slider
-	});
+            $('.main-slider').flexslider({
+                // Primary Controls
+                controlNav: true, //Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
+                directionNav: true, //Boolean: Create navigation for previous/next navigation? (true/false)
+                prevText: "", //String: Set the text for the "previous" directionNav item
+                nextText: "", //String: Set the text for the "next" directionNav item
+                // Special properties
+                controlsContainer: "", //{UPDATED} Selector: USE CLASS SELECTOR. Declare which container the navigation elements should be appended too. Default container is the FlexSlider element. Example use would be ".flexslider-container". Property is ignored if given element is not found.
+                manualControls: "", //Selector: Declare custom control navigation. Examples would be ".flex-control-nav li" or "#tabs-nav li img", etc. The number of elements in your controlNav should match the number of slides/tabs.
+                sync: "", //{NEW} Selector: Mirror the actions performed on this slider with another slider. Use with care.
+                asNavFor: "", //{NEW} Selector: Internal property exposed for turning the slider into a thumbnail navigation for another slider
+            });
 
-});
-</script>
+        });
+    </script>
 
 </body>
+
 </html>
