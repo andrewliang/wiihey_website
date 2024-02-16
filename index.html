@@ -1,18 +1,38 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8">
+    <meta charset="utf-8">
 
-<title>the world’s leading Internet of things (IoT) service and solution provider</title>
+    <title>the world’s leading Internet of things (IoT) service and solution provider</title>
 
-<meta http-equiv="refresh" content="0; url=./en/index.html" />
+    <!-- <meta http-equiv="refresh" content="0; url=./en/index.html" /> -->
 
-<meta name="author" content="Jiayan Li" />
-<meta name="keywords" content="Manhole monitoring, Manhole sensor, Manhole cover open detector, Smart City">
-<meta name="description" content="IoT solution provider including manhole sensor, manhole cover monitoring, manhole cover open detector, smart parking, personal positioning for smart cities, smart retail.">
+    <meta name="author" content="Jiayan Li" />
+    <meta name="keywords" content="Manhole monitoring, Manhole sensor, Manhole cover open detector, Smart City">
+    <meta name="description"
+        content="IoT solution provider including manhole sensor, manhole cover monitoring, manhole cover open detector, smart parking, personal positioning for smart cities, smart retail.">
 
 </head>
 
 <body>
 </body>
+<script>
+
+    const language = navigator.language ;
+
+    console.log(language);
+
+
+    if (language == "zh-CN") {
+        window.location.href = "./zh-CN/index.html";
+    }
+    else if (language == "en") {
+        window.location.href = "./en/index.html";
+    }
+    else {
+        window.location.href = "./en/index.html";
+    } 
+</script>
+
 </html>
