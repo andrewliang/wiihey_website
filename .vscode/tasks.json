@@ -7,7 +7,7 @@
       "command": "aos",
       "args": [
         "make",
-        "@haas100",
+        "@haaseduk1",
         "-c",
         "config"
       ],

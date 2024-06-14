@@ -201,7 +201,7 @@
 
 .my-auto { margin-top: auto !important; margin-bottom: auto !important; }
 
-.img-fluid { max-width: 100%; height: auto; }
+.img-fluid { max-width:100%; height: auto; }
 
 .img-thumbnail { padding: 0.25rem; background-color: #fff; border: 1px solid #ddd; border-radius: 0.25rem; transition: all 0.2s ease-in-out; max-width: 100%; height: auto; }
 
