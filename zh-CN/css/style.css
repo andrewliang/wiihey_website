@@ -125,10 +125,37 @@ img.img-polaroid {
 	float:left;
 	margin-left:20px;
 	}
+.biankuang
+	{
+		border:dashed ;
+		border-width:thin;
+		color:#62c2e4;
+		background:#e6edf0 no-repeat;
+	}
+.biankuang-1
+	{
+		border:dashed ;
+		border-width:thin;
+		color:#62c2e4;
+	}
+.dtd-shadow
+	{
+		box-shadow:0px 12px 8px 15px #adacac;
+		border-radius:10px;
+	}
+.ql-shadow img
+	{
+		-webkit-filter:drop-shadow(10px 10px 10px rgba(0 0 0 .5));
+		filter:drop-shadow(10px 10px 10px  rgba(0 0 0 .5));
+	}
+.ql-shadow-1 img
+	{
+		-webkit-filter:box-shadow(10px 10px 10px rgba(0 0 0 .5));
+		filter:drop-shadow(10px 10px 10px  rgba(0 ,0 ,0 ,.5));
+	}
 header .top .row {
 	margin-bottom: 0;
 }
-
 
 header .top {
 	padding:20px 0;
